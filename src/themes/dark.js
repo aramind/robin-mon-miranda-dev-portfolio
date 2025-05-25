@@ -35,6 +35,23 @@ const darkTheme = createTheme({
     condensed: `"Barlow Condensed", sans-serif`,
     poppins: `"Poppins", sans-serif`,
   },
+  components: {
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          textDecoration: "none",
+        },
+      },
+    },
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          backgroundColor: COLORS.black.main,
+          color: COLORS.white.main, // optional text color on body
+        },
+      },
+    },
+  },
 });
 
 export default darkTheme;

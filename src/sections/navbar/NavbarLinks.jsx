@@ -1,4 +1,4 @@
-import { Link, Stack } from "@mui/material";
+import { Button, Link, Stack, Typography } from "@mui/material";
 import React from "react";
 import useActiveSection from "../../hooks/useActiveSection";
 
@@ -10,8 +10,14 @@ const sections = [
 ];
 const NavbarLinks = () => {
   const active = useActiveSection(sections.map((s) => s.name));
+
   return (
-    <Stack direction="row" justifyContent="space-between" alignItems="center">
+    <Stack
+      direction="row"
+      justifyContent="space-between"
+      alignItems="center"
+      spacing={4}
+    >
       {sections?.map((s) => (
         <Link
           href={`#${s.name}`}
@@ -20,9 +26,12 @@ const NavbarLinks = () => {
             transition: "color 0.3s",
           }}
         >
-          {s.text}
+          <Typography variant="h6" noWrap>
+            {s.text}
+          </Typography>
         </Link>
       ))}
+      <Button variant="outlined">resume</Button>
     </Stack>
   );
 };

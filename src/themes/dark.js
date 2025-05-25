@@ -40,6 +40,7 @@ const darkTheme = createTheme({
       styleOverrides: {
         root: {
           textDecoration: "none",
+          color: COLORS.white.main,
         },
       },
     },

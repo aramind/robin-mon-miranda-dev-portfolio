@@ -1,8 +1,14 @@
+import { CssBaseline } from "@mui/material";
+import NavBar from "./sections/navbar/NavBar";
+import Main from "./layout/Main";
+
 function App() {
   return (
-    <div className="App">
-      <p>ROBIN MON MIRANDA</p>
-    </div>
+    <>
+      <CssBaseline />
+      <NavBar />
+      <Main />
+    </>
   );
 }
 

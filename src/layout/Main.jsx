@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import Landing from "../sections/landing/Landing";
+import Project from "../sections/projects/Project";
 
 const Main = () => {
   return (
@@ -12,9 +13,7 @@ const Main = () => {
       //   sx={{ backgroundColor: (theme) => theme.palette.black.main }}
     >
       <Landing />
-      <Box height="100vh" id="projects">
-        projects
-      </Box>
+      <Project />
       <Box height="100vh" id="experiences">
         experiences
       </Box>

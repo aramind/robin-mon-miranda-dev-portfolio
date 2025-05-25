@@ -15,7 +15,10 @@ const NavLinksMobile = ({ sections }) => {
     <>
       <IconButton onClick={(e) => setAnchorMenu(e.currentTarget)}>
         <HamburgerIcon
-          sx={{ fontSize: "50px", color: (theme) => theme.palette.white.main }}
+          sx={{
+            fontSize: "50px",
+            color: (theme) => theme.palette.secondary.main,
+          }}
         />{" "}
       </IconButton>
       <Menu

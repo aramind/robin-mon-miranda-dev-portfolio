@@ -1,1 +1,1 @@
-export { LunchDiningSharp as HamburgerIcon } from "@mui/icons-material";
+export { MenuSharp as HamburgerIcon } from "@mui/icons-material";

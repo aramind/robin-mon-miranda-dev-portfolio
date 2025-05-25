@@ -9,7 +9,8 @@ const COLORS = {
   secondary: {
     dark: "#CCA114",
     main: "#E9BB1D",
-    light: "#F2E7BF",
+    light: "#EECB58",
+    lightest: "#F2E7BF",
   },
   black: {
     dark: "#0D0D15",
@@ -41,6 +42,29 @@ const darkTheme = createTheme({
         root: {
           textDecoration: "none",
           color: COLORS.white.main,
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: "none",
+        },
+        contained: {
+          backgroundColor: COLORS.secondary.main,
+          color: COLORS.black.main,
+          "&:hover": {
+            backgroundColor: COLORS.secondary.light,
+          },
+        },
+        outlined: {
+          color: COLORS.white.main,
+          borderColor: COLORS.secondary.main,
+          "&:hover": {
+            borderColor: COLORS.secondary.light,
+            backgroundColor: COLORS.black.main,
+            color: COLORS.secondary.light,
+          },
         },
       },
     },

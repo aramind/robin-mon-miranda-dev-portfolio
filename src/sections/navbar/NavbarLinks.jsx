@@ -18,6 +18,9 @@ const NavbarLinks = ({ sections }) => {
           sx={{
             color: active === s.name ? "secondary.main" : "white.main",
             transition: "color 0.3s",
+            "&:hover": {
+              color: "secondary.light",
+            },
           }}
         >
           <Typography variant="h6" noWrap>

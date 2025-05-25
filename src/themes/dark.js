@@ -9,7 +9,7 @@ const COLORS = {
   secondary: {
     dark: "#CCA114",
     main: "#E9BB1D",
-    light: "#F2D77D",
+    light: "#F2E7BF",
   },
   black: {
     dark: "#0D0D15",

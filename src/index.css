@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* general classes */
 .fullWandH {
   width: 100%;

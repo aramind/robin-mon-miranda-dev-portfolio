@@ -1,7 +1,27 @@
-import { AppBar, Box, Link, Stack, Toolbar, Typography } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  Button,
+  IconButton,
+  Link,
+  Stack,
+  Toolbar,
+  Typography,
+} from "@mui/material";
 import NavbarLinks from "./NavbarLinks";
+import useIsInMobile from "../../hooks/useIsInMobile";
+import { HamburgerIcon } from "../../utils/muiIcons";
+import NavLinksMobile from "./NavLinksMobile";
+
+const sections = [
+  { text: "projects", name: "projects" },
+  { text: "experiences", name: "experiences" },
+  { text: "about me", name: "about" },
+  { text: "contact", name: "contact" },
+];
 
 const NavBar = () => {
+  const isInMobile = useIsInMobile();
   return (
     <AppBar sx={{ maxHeight: "80px" }} elevation={0}>
       <Toolbar sx={{ backgroundColor: (theme) => theme.palette.black.main }}>
@@ -12,7 +32,11 @@ const NavBar = () => {
             </Typography>
           </Link>
           <Box width={1} />
-          <NavbarLinks />
+          {isInMobile ? (
+            <NavLinksMobile sections={sections} />
+          ) : (
+            <NavbarLinks sections={sections} />
+          )}
         </Stack>
       </Toolbar>
     </AppBar>

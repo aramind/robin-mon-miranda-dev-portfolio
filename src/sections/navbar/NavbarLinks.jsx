@@ -2,13 +2,7 @@ import { Button, Link, Stack, Typography } from "@mui/material";
 import React from "react";
 import useActiveSection from "../../hooks/useActiveSection";
 
-const sections = [
-  { text: "projects", name: "projects" },
-  { text: "experiences", name: "experiences" },
-  { text: "about me", name: "about" },
-  { text: "contact", name: "contact" },
-];
-const NavbarLinks = () => {
+const NavbarLinks = ({ sections }) => {
   const active = useActiveSection(sections.map((s) => s.name));
 
   return (

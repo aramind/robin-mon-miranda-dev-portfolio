@@ -151,4 +151,11 @@ export const experiences = [
   // },
 ];
 
-export const about = {};
+// export const aboutMe = {
+//   name: "Robin Mon R. Miranda",
+//   tagline: "From circuits to code.",
+//   paragraphs: [
+//     "I come from a background in electronics engineering, with years of experience as a college and review instructor—helping future engineers pass and excel in their licensure exams.",
+
+//   ]
+// };

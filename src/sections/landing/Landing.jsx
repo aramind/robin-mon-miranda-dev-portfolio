@@ -3,7 +3,7 @@ import useIsInMobile from "../../hooks/useIsInMobile";
 import { forwardRef } from "react";
 import CTAButtons from "../../components/CTAButtons";
 
-const Landing = forwardRef((_, ref) => {
+const Landing = forwardRef(({ handleOpenMessageDialog }, ref) => {
   const isInMobile = useIsInMobile();
   return (
     <Box
@@ -39,7 +39,7 @@ const Landing = forwardRef((_, ref) => {
             I’m currently open to work and excited to begin a career where I can
             provide solutions through code.
           </Typography>
-          <CTAButtons />
+          <CTAButtons handleOpenMessageDialog={handleOpenMessageDialog} />
         </Box>
       </Stack>
     </Box>

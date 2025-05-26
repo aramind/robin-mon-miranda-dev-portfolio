@@ -37,7 +37,10 @@ const Main = () => {
       paddingTop="80px"
       //   sx={{ backgroundColor: (theme) => theme.palette.black.main }}
     >
-      <Landing ref={landingRef} />
+      <Landing
+        ref={landingRef}
+        handleOpenMessageDialog={handleOpenMessageDialog}
+      />
       <Stack direction="row" mb={2}>
         <Box
           flex={1}

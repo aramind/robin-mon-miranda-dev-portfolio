@@ -21,7 +21,7 @@ const Main = () => {
       //   sx={{ backgroundColor: (theme) => theme.palette.black.main }}
     >
       <Landing ref={landingRef} />
-      <Stack className="outlined" direction="row">
+      <Stack direction="row">
         <Box
           flex={1}
           sx={{
@@ -36,12 +36,12 @@ const Main = () => {
         >
           <SideHero isVisible={isVisible} />
         </Box>
-        <Box flex={2}>
+        <Stack flex={2} width={1}>
           <Project />
-          <Box height="150vh" id="experiences" className="outlined">
+          <Box height="150vh" id="experiences" className="outlined2">
             experiences
           </Box>
-        </Box>
+        </Stack>
       </Stack>
       <Box height="150vh" id="about" className="outlined">
         about me

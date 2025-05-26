@@ -45,8 +45,17 @@ const ProjectCard = ({
         },
       }}
     >
-      <Stack direction="row" justifyContent="space-between" alignItems="center">
-        <Typography color="primary" fontSize="1.2rem" fontWeight="bold">
+      <Stack
+        direction={{ xs: "column-reverse", md: "row" }}
+        justifyContent="space-between"
+        alignItems="center"
+      >
+        <Typography
+          color="primary"
+          fontSize="1.2rem"
+          fontWeight="bold"
+          textAlign={{ xs: "center", md: "left" }}
+        >
           {title}
         </Typography>
         <Stack direction="row">
@@ -67,18 +76,38 @@ const ProjectCard = ({
         </Stack>
       </Stack>
 
-      <Typography color="primary.light">{description}</Typography>
-      <Stack direction="row" spacing={1} flexWrap="wrap" width={1}>
+      <Typography
+        color="primary.light"
+        textAlign={{ xs: "center", md: "left" }}
+      >
+        {description}
+      </Typography>
+      <Stack
+        direction="row"
+        spacing={1}
+        flexWrap="wrap"
+        width={1}
+        justifyContent={{ xs: "center", md: "flex-start" }}
+      >
         {images?.map((img, index) => (
           <Fragment key={index}>
             <ProjectImage src={img} />
           </Fragment>
         ))}
       </Stack>
-      <Typography variant="subtitle2" textAlign="justify">
+      <Typography
+        variant="subtitle2"
+        textAlign={{ xs: "center", md: "justify" }}
+      >
         {details}
       </Typography>
-      <Stack direction="row" height="2rem" spacing={1}>
+      <Stack
+        direction="row"
+        height="2rem"
+        spacing={1}
+        justifyContent={{ xs: "center", md: "flex-start" }}
+        flexWrap="wrap"
+      >
         {stack?.map((s, index) => (
           <IconImage techName={s} key={index} />
         ))}

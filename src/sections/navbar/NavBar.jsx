@@ -10,7 +10,6 @@ import {
 } from "@mui/material";
 import NavbarLinks from "./NavbarLinks";
 import useIsInMobile from "../../hooks/useIsInMobile";
-import { HamburgerIcon } from "../../utils/muiIcons";
 import NavLinksMobile from "./NavLinksMobile";
 
 const sections = [

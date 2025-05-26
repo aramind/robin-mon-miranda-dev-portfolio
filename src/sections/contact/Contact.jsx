@@ -4,7 +4,7 @@ import useIsInMobile from "../../hooks/useIsInMobile";
 import CTAButtons from "../../components/CTAButtons";
 import PersonalDetails from "./PersonalDetails";
 
-const Contact = () => {
+const Contact = ({ handleOpenMessageDialog }) => {
   const isInMobile = useIsInMobile();
   return (
     <Box
@@ -43,7 +43,7 @@ const Contact = () => {
         contribute and grow, I'd love to hear from you!
       </Typography>
       <br />
-      <CTAButtons />
+      <CTAButtons handleOpenMessageDialog={handleOpenMessageDialog} />
       <br />
       <br />
       <PersonalDetails />

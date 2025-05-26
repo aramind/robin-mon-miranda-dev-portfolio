@@ -1,5 +1,5 @@
 import { Box, Stack } from "@mui/material";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Landing from "../sections/landing/Landing";
 import Project from "../sections/projects/Project";
 import SideHero from "../components/SideHero";
@@ -7,8 +7,11 @@ import useStickySideHero from "../hooks/useStickySideHero";
 import Experiences from "../sections/experiences/Experiences";
 import About from "../sections/about/About";
 import Contact from "../sections/contact/Contact";
+import SendMessageDialog from "../components/SendMessageDialog";
 
 const Main = () => {
+  const [openMessageDialog, setOpeMessageDialog] = useState(false);
+
   const landingRef = useRef();
   const experiencesRef = useRef();
   const { isSticky, isVisible } = useStickySideHero({
@@ -16,8 +19,15 @@ const Main = () => {
     experiencesRef,
   });
 
-  console.log(isSticky);
-  console.log(isVisible);
+  // handlers
+
+  const handleOpenMessageDialog = () => {
+    setOpeMessageDialog(true);
+  };
+
+  const handleCloseMessageDialog = () => {
+    setOpeMessageDialog(false);
+  };
 
   return (
     <Box
@@ -50,7 +60,12 @@ const Main = () => {
       </Stack>
       <br />
       <About />
-      <Contact />
+      <Contact handleOpenMessageDialog={handleOpenMessageDialog} />
+      <SendMessageDialog
+        open={openMessageDialog}
+        setOpen={setOpeMessageDialog}
+        // handleCloseMessageDialog={handleCloseMessageDialog}
+      />
     </Box>
   );
 };

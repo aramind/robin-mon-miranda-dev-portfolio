@@ -1,7 +1,7 @@
 import { Button, Stack } from "@mui/material";
 import React from "react";
 
-const CTAButtons = () => {
+const CTAButtons = ({ handleOpenMessageDialog }) => {
   return (
     <Stack
       direction={{ xs: "column", md: "row" }}
@@ -12,7 +12,12 @@ const CTAButtons = () => {
       <Button variant="outlined" fullWidth sx={{ py: 1.5 }}>
         CHECK MY RESUME
       </Button>
-      <Button variant="contained" fullWidth sx={{ py: 1.5 }}>
+      <Button
+        variant="contained"
+        fullWidth
+        sx={{ py: 1.5 }}
+        onClick={handleOpenMessageDialog}
+      >
         SHOOT ME A MESSAGE
       </Button>
     </Stack>

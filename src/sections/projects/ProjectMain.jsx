@@ -6,7 +6,7 @@ import ProjectCard from "./ProjectCard";
 
 const ProjectMain = () => {
   return (
-    <Box width={1} height={1}>
+    <Box width={1} height={1} mb={2}>
       <SectionTitle title="Some things I've built" />
       <br />
       <Stack spacing={2} ml={{ xs: 0, md: 4 }}>
@@ -23,6 +23,7 @@ const ProjectMain = () => {
           />
         ))}
       </Stack>
+      <br />
     </Box>
   );
 };

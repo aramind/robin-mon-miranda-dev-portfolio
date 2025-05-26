@@ -54,7 +54,10 @@ const Main = () => {
             pl: 10,
           }}
         >
-          <SideHero isVisible={isVisible} />
+          <SideHero
+            isVisible={isVisible}
+            handleOpenMessageDialog={handleOpenMessageDialog}
+          />
         </Box>
         <Stack flex={2} width={1} direction="column">
           <Project />

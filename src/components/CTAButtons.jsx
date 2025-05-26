@@ -1,10 +1,10 @@
 import { Button, Stack } from "@mui/material";
 import React from "react";
 
-const CTAButtons = ({ handleOpenMessageDialog }) => {
+const CTAButtons = ({ direction, handleOpenMessageDialog }) => {
   return (
     <Stack
-      direction={{ xs: "column", md: "row" }}
+      direction={direction || { xs: "column", md: "row" }}
       justifyContent="space-between"
       spacing={2}
       mt={2}

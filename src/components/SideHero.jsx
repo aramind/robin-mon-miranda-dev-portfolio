@@ -1,6 +1,7 @@
 import { Box, Button, Slide, Stack, Typography } from "@mui/material";
+import CTAButtons from "./CTAButtons";
 
-const SideHero = ({ isVisible }) => {
+const SideHero = ({ isVisible, handleOpenMessageDialog }) => {
   return (
     <Slide
       in={isVisible}
@@ -32,14 +33,18 @@ const SideHero = ({ isVisible }) => {
             I’m currently open to work and excited to begin a career where I can
             provide solutions through code.
           </Typography>
-          <Stack justifyContent="space-between" spacing={2} mt={2}>
+          {/* <Stack justifyContent="space-between" spacing={2} mt={2}>
             <Button variant="outlined" fullWidth sx={{ py: 1.5 }}>
               CHECK MY RESUME
             </Button>
             <Button variant="contained" fullWidth sx={{ py: 1.5 }}>
               SHOOT ME A MESSAGE
             </Button>
-          </Stack>
+          </Stack> */}
+          <CTAButtons
+            direction="column"
+            handleOpenMessageDialog={handleOpenMessageDialog}
+          />
         </Box>
       </Box>
     </Slide>

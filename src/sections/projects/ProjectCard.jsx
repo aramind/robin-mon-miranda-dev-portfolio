@@ -1,8 +1,8 @@
-import { Box, Stack, Typography } from "@mui/material";
-import { grey } from "@mui/material/colors";
+import { IconButton, Stack, Typography } from "@mui/material";
 import React, { Fragment } from "react";
 import ProjectImage from "./ProjectImage";
 import IconImage from "./IconImage";
+import { GitIcon, LaunchIcon } from "../../utils/muiIcons";
 
 const ProjectCard = ({
   title,
@@ -13,13 +13,29 @@ const ProjectCard = ({
   liveLink,
   gitLink,
 }) => {
+  // onclickhandlers
+
+  const onLaunchClick = (e) => {
+    e.stopPropagation();
+    if (!liveLink) return;
+    window.open(liveLink, "_blank", "noopener,noreferrer");
+  };
+
+  const onGitOpenClick = (e) => {
+    e.stopPropagation();
+    if (!gitLink) return;
+    window.open(gitLink, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <Stack
       spacing={1}
       width={1}
       borderRadius={2}
       p={2}
+      onClick={onLaunchClick}
       sx={{
+        cursor: liveLink ? "pointer" : "default",
         outlineStyle: "solid",
         outlineWidth: 1,
         outlineColor: (theme) => theme.palette.black.light,
@@ -29,9 +45,28 @@ const ProjectCard = ({
         },
       }}
     >
-      <Typography color="primary" fontSize="1.2rem" fontWeight="bold">
-        {title}
-      </Typography>
+      <Stack direction="row" justifyContent="space-between" alignItems="center">
+        <Typography color="primary" fontSize="1.2rem" fontWeight="bold">
+          {title}
+        </Typography>
+        <Stack direction="row">
+          <IconButton
+            color="secondary"
+            onClick={onLaunchClick}
+            disabled={!liveLink}
+          >
+            <LaunchIcon />
+          </IconButton>
+          <IconButton
+            color="secondary"
+            onClick={onGitOpenClick}
+            disabled={!gitLink}
+          >
+            <GitIcon />
+          </IconButton>
+        </Stack>
+      </Stack>
+
       <Typography color="primary.light">{description}</Typography>
       <Stack direction="row" spacing={1} flexWrap="wrap" width={1}>
         {images?.map((img, index) => (

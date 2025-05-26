@@ -25,9 +25,6 @@ const ProjectCard = ({
         outlineColor: (theme) => theme.palette.black.light,
         transition: "all 0.4s ease-in-out",
         "&:hover": {
-          // outlineStyle: "solid",
-          // outlineWidth: 1,
-          // outlineColor: (theme) => theme.palette.primary.main,
           bgcolor: (theme) => theme.palette.black.light,
         },
       }}

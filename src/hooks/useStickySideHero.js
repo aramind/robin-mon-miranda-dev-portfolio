@@ -6,12 +6,9 @@ const useStickySideHero = (landingRef) => {
 
   useEffect(() => {
     const onScroll = () => {
-      const projects = document.getElementById("projects");
-      const about = document.getElementById("about");
-      // const landing = document.getElementById("landing");
       const landing = landingRef?.current;
 
-      if (!landing || !projects || !about) return;
+      if (!landing) return;
 
       // Show SideHero only if we're between middle of project and bottom of experiences
 

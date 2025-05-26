@@ -36,7 +36,17 @@ const ExpMain = ({ experiences }) => {
           ))}
         </Stack>
       ) : (
-        <Box sx={{ display: "flex", flexDirection: "row", mt: 2 }} px={4}>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            mt: 1,
+            borderTop: "1px solid",
+            borderBottom: "1px solid",
+            borderColor: (theme) => theme.palette.black.light,
+          }}
+          px={4}
+        >
           <Tabs
             orientation="vertical"
             variant="scrollable"
@@ -70,7 +80,7 @@ const ExpMain = ({ experiences }) => {
                 />
               ))}
           </Tabs>
-          <Box sx={{ ml: 4, flex: 1 }}>
+          <Box sx={{ ml: 4, flex: 1 }} pt={1} pb={2}>
             {preparedExpTabs?.[selectedExp]?.component}
           </Box>
         </Box>

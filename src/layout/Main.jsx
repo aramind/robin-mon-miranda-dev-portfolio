@@ -27,7 +27,7 @@ const Main = () => {
       //   sx={{ backgroundColor: (theme) => theme.palette.black.main }}
     >
       <Landing ref={landingRef} />
-      <Stack direction="row" mb={2}>
+      <Stack direction="row" mb={2} className="outlined">
         <Box
           flex={1}
           sx={{
@@ -47,6 +47,7 @@ const Main = () => {
           <Experiences ref={experiencesRef} />
         </Stack>
       </Stack>
+      <br />
       <About />
       <Box height="100vh" id="contact">
         contact

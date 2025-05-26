@@ -150,3 +150,5 @@ export const experiences = [
   //   ],
   // },
 ];
+
+export const about = {};

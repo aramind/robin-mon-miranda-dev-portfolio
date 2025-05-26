@@ -2,6 +2,7 @@ import React from "react";
 import { Controller, useForm } from "react-hook-form";
 
 import {
+  Box,
   Button,
   Dialog,
   DialogActions,
@@ -66,7 +67,6 @@ const SendMessageDialog = ({ open, setOpen, submitHandler }) => {
             Let's Connect
           </Typography>
         </DialogTitle>
-
         <DialogContent>
           <Stack spacing={2}>
             <Stack direction={{ xs: "column", md: "row" }} spacing={2}>
@@ -155,57 +155,69 @@ const SendMessageDialog = ({ open, setOpen, submitHandler }) => {
           </Stack>
         </DialogContent>
         <DialogActions>
-          <Button
-            onClick={handleClose}
-            variant="outlined"
-            sx={{
-              borderColor: (theme) => theme.palette.primary.dark,
-              color: (theme) => theme.palette.black.main,
-              width: "160px",
-              "&:hover": {
+          <Stack
+            direction="row"
+            justifyContent="stretch"
+            alignItems="center"
+            width={{ xs: 1, md: "500px" }}
+            spacing={1}
+            px={{ xs: 2 }}
+          >
+            <Button
+              onClick={handleClose}
+              variant="outlined"
+              sx={{
+                flex: 1,
+                py: 1,
                 borderColor: (theme) => theme.palette.primary.dark,
-                color: (theme) => theme.palette.primary.dark,
-                backgroundColor: (theme) => theme.palette.white.light,
-              },
-            }}
-          >
-            Cancel
-          </Button>
-          <Button
-            onClick={handleClear}
-            variant="outlined"
-            sx={{
-              borderColor: (theme) => theme.palette.primary.dark,
-              color: (theme) => theme.palette.black.main,
-              width: "160px",
-              "&:hover": {
+                color: (theme) => theme.palette.black.main,
+                "&:hover": {
+                  borderColor: (theme) => theme.palette.primary.dark,
+                  color: (theme) => theme.palette.primary.dark,
+                  backgroundColor: (theme) => theme.palette.white.light,
+                },
+              }}
+            >
+              Cancel
+            </Button>
+            <Button
+              onClick={handleClear}
+              variant="outlined"
+              sx={{
+                flex: 1,
+                py: 1,
                 borderColor: (theme) => theme.palette.primary.dark,
-                color: (theme) => theme.palette.primary.dark,
-                backgroundColor: (theme) => theme.palette.white.light,
-              },
-            }}
-          >
-            Clear
-          </Button>
-          <Button
-            type="submit"
-            variant="contained"
-            onClick={handleClose}
-            width="200px"
-            sx={{
-              backgroundColor: (theme) => theme.palette.primary.dark,
-              color: (theme) => theme.palette.white.main,
-              width: "160px",
-              "&:hover": {
-                backgroundColor: (theme) => theme.palette.primary.main,
-              },
-            }}
-          >
-            Send
-          </Button>
+                color: (theme) => theme.palette.black.main,
+                "&:hover": {
+                  borderColor: (theme) => theme.palette.primary.dark,
+                  color: (theme) => theme.palette.primary.dark,
+                  backgroundColor: (theme) => theme.palette.white.light,
+                },
+              }}
+            >
+              Clear
+            </Button>
+            <Button
+              type="submit"
+              variant="contained"
+              onClick={handleClose}
+              width="200px"
+              sx={{
+                flex: 1,
+                py: 1,
+                backgroundColor: (theme) => theme.palette.primary.dark,
+                color: (theme) => theme.palette.white.main,
+                "&:hover": {
+                  backgroundColor: (theme) => theme.palette.primary.main,
+                },
+              }}
+            >
+              Send
+            </Button>
+          </Stack>
         </DialogActions>
-
         {/* </DraggableDialog> */}
+        <Box height="1rem" />
       </Dialog>
     </form>
   );

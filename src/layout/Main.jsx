@@ -28,7 +28,7 @@ const Main = () => {
       //   sx={{ backgroundColor: (theme) => theme.palette.black.main }}
     >
       <Landing ref={landingRef} />
-      <Stack direction="row" mb={2} className="outlined">
+      <Stack direction="row" mb={2}>
         <Box
           flex={1}
           sx={{

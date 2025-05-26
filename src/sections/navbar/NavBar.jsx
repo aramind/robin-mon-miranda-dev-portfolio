@@ -1,18 +1,10 @@
-import {
-  AppBar,
-  Box,
-  Button,
-  IconButton,
-  Link,
-  Stack,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+import { AppBar, Box, Link, Stack, Toolbar, Typography } from "@mui/material";
 import NavbarLinks from "./NavbarLinks";
 import useIsInMobile from "../../hooks/useIsInMobile";
 import NavLinksMobile from "./NavLinksMobile";
 
 const sections = [
+  { text: "", name: "landing" },
   { text: "projects", name: "projects" },
   { text: "experiences", name: "experiences" },
   { text: "about me", name: "about" },

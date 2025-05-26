@@ -1,7 +1,8 @@
 import React, { Fragment } from "react";
 import SectionTitle from "../../components/SectionTitle";
-import { Box, Stack, Typography } from "@mui/material";
+import { Avatar, Box, Chip, Grid, Stack, Typography } from "@mui/material";
 import useIsInMobile from "../../hooks/useIsInMobile";
+import { aboutMe } from "../../data/data";
 
 const Highlighted = ({ children }) => (
   <Box
@@ -23,6 +24,8 @@ const ParagraphWrapper = ({ children }) => (
     {children}
   </Typography>
 );
+
+const techStack = aboutMe?.stack;
 const About = () => {
   const isInMobile = useIsInMobile();
   return (
@@ -115,6 +118,29 @@ const About = () => {
           </Highlighted>
           .
         </ParagraphWrapper>
+        <ParagraphWrapper>
+          As I continue learning and building, I’ve had the chance to work with
+          the following technologies:
+        </ParagraphWrapper>
+        <Box
+          display="flex"
+          flexWrap="wrap"
+          justifyContent="space-between"
+          gap={1}
+        >
+          {techStack?.map((tech, index) => (
+            <Chip
+              key={index}
+              avatar={<Avatar alt={tech} src={`/assets/tech/${tech}.png`} />}
+              label={tech.toUpperCase()}
+              variant="outlined"
+              sx={{
+                color: "primary.main",
+                borderColor: "primary.main",
+              }}
+            />
+          ))}
+        </Box>
       </Stack>
       <br />
     </Box>

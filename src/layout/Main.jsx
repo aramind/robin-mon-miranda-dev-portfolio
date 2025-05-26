@@ -5,6 +5,7 @@ import Project from "../sections/projects/Project";
 import SideHero from "../components/SideHero";
 import useStickySideHero from "../hooks/useStickySideHero";
 import Experiences from "../sections/experiences/Experiences";
+import About from "../sections/about/About";
 
 const Main = () => {
   const landingRef = useRef();
@@ -26,7 +27,7 @@ const Main = () => {
       //   sx={{ backgroundColor: (theme) => theme.palette.black.main }}
     >
       <Landing ref={landingRef} />
-      <Stack direction="row">
+      <Stack direction="row" mb={2}>
         <Box
           flex={1}
           sx={{
@@ -46,9 +47,7 @@ const Main = () => {
           <Experiences ref={experiencesRef} />
         </Stack>
       </Stack>
-      <Box height="150vh" id="about" className="outlined">
-        about me
-      </Box>
+      <About />
       <Box height="100vh" id="contact">
         contact
       </Box>

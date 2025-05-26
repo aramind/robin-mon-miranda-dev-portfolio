@@ -3,6 +3,7 @@ import useIsInMobile from "../../hooks/useIsInMobile";
 import { Box, Stack } from "@mui/material";
 import ExpMain from "./ExpMain";
 import { experiences } from "../../data/data";
+import ExpMainMobile from "./ExpMainMobile";
 
 const Experiences = () => {
   const isInMobile = useIsInMobile();
@@ -17,9 +18,15 @@ const Experiences = () => {
       spacing={4}
     >
       {!isInMobile && <Box flex={1} />}
-      <Box flex={isInMobile ? 1 : 2}>
-        <ExpMain experiences={experiences} />
-      </Box>
+      {isInMobile ? (
+        <Box flex={1}>
+          <ExpMainMobile experiences={experiences} />
+        </Box>
+      ) : (
+        <Box flex={isInMobile ? 1 : 2}>
+          <ExpMain experiences={experiences} />
+        </Box>
+      )}
     </Stack>
   );
 };

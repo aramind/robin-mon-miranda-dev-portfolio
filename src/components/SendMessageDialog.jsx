@@ -14,7 +14,7 @@ import {
 } from "@mui/material";
 import useIsInMobile from "../hooks/useIsInMobile";
 
-const SendMessageDialog = ({ open, setOpen, submitHandler }) => {
+const SendMessageDialog = ({ open, setOpen }) => {
   const isInMobile = useIsInMobile();
   // form related
   const {
@@ -50,7 +50,7 @@ const SendMessageDialog = ({ open, setOpen, submitHandler }) => {
     reset({});
   };
   return (
-    <form onSubmit={handleSubmit(onSubmit)} noValidate>
+    <form noValidate>
       <Dialog
         open={open}
         onClose={handleClose}
@@ -198,9 +198,9 @@ const SendMessageDialog = ({ open, setOpen, submitHandler }) => {
               Clear
             </Button>
             <Button
-              type="submit"
+              //   type="submit"
               variant="contained"
-              onClick={handleClose}
+              onClick={handleSubmit(onSubmit)}
               width="200px"
               sx={{
                 flex: 1,

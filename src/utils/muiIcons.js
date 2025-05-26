@@ -1,1 +1,5 @@
-export { MenuSharp as HamburgerIcon } from "@mui/icons-material";
+export {
+  MenuSharp as HamburgerIcon,
+  LaunchSharp as LaunchIcon,
+  GitHub as GitIcon,
+} from "@mui/icons-material";

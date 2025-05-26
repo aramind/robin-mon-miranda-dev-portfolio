@@ -17,6 +17,8 @@ const ProjectMain = () => {
             details={p.details}
             images={p.images}
             stack={p.stack}
+            gitLink={p.gitLink}
+            liveLink={p.liveLink}
           />
         ))}
       </Stack>

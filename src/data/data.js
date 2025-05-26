@@ -23,6 +23,8 @@ export const projects = [
       "mui",
       "git",
     ],
+    gitLink: "https://github.com/aramind/cassi",
+    liveLink: "https://cassi-fbe1.onrender.com",
   },
   {
     title: "iLMS (Integrative Learning Management System)",

@@ -71,3 +71,86 @@ export const projects = [
     gitLink: "https://github.com/aramind/quebee-admin-portal",
   },
 ];
+
+export const experiences = [
+  {
+    company: "PERCDC Learnhub",
+    location: "Manila, Cebu, and Cavite, Philippines",
+    roles: [
+      { title: "Asst. Review Director", period: "May 2015 - April 2025" },
+      { title: "Review Mentor", period: "May 2013 - April 2025" },
+    ],
+    highlights: [
+      "Mentored over 5,000 Electronics Engineering (ECE) graduates, guiding them in preparation for the ECE and/or ECT licensure examinations with a high success rate.",
+      "Played a central role in designing and continuously improving review programs across 20+ batches, directly contributing to increased student engagement and performance.",
+      "Led the development of customized learning materials to address review-related challenges, enhancing content effectiveness and relevance.",
+      "Spearheaded the digital transformation of the review process, integrating web and mobile technologies to improve accessibility and learner experience.",
+      "Developed content for the mobile app and online review platform, ensuring consistent and high-quality learning experiences across channels.",
+      "Contributed to the writing and enhancement of multiple review books, including practice problems and supplemental materials tailored to licensure exam standards.",
+    ],
+  },
+  {
+    company: "PUP Manila",
+    location: "Manila, Philippines",
+    roles: [
+      { title: "Full-time Instructor", period: "June 2022 – Feb 2025" },
+      { title: "Part-time Instructor", period: "June 2016 – June 2022" },
+    ],
+    highlights: [
+      "Taught and mentored over 3,000 students in Electronics, Electrical, and Mechanical Engineering programs, delivering in-depth instruction in electronics and communication systems.",
+      "Collaborated with the ECE department to evaluate and prepare graduating students for licensure exams, helping maintain a consistent record of topnotchers and above-average national passing rates for both the ECE and ECT board exams.",
+      "Took initiative in creating targeted review content and pre-board assessments, identifying gaps in student readiness and tailoring instruction to meet professional standards.",
+      "Actively contributed to curriculum enhancement by incorporating real-world problem-solving exercises, fostering analytical thinking and applied technical skills.",
+    ],
+  },
+  {
+    company: "Universal College of Parañaque",
+    location: "Parañaque, Philippines",
+    roles: [
+      { title: "Part-time Instructor", period: "January 2017 – March 2023" },
+    ],
+    highlights: [
+      "Delivered instruction in mathematics, allied sciences, electronics, and communication systems to students in the ECE, EE, IE, and CpE programs, fostering both theoretical understanding and practical application.",
+      "Played a key role in preparing graduating students—especially in the ECE and EE departments—for licensure exams, contributing to the school’s consistently above-national average passing rates.",
+      "Developed and implemented board-exam readiness activities and diagnostic evaluations tailored to student needs, supporting improved academic outcomes.",
+    ],
+  },
+  {
+    company: "QuexBook",
+    location: "Cavite, Philippines",
+    roles: [
+      {
+        title: "Academic Content Developer & Evaluator",
+        period: "January 2016 – December 2023",
+      },
+    ],
+    highlights: [
+      "Contributed educational content for the QuexBook app, designed to support high school and college students in mastering core academic subjects.",
+      "Reviewed and evaluated content of the mobile app to ensure accuracy, clarity, and alignment with target outcomes.",
+      "Played a key role in planning and enhancing the app’s educational structure, improving user experience and learning effectiveness.",
+    ],
+  },
+  {
+    company: "ACLC College of Manila",
+    location: "Manila, Philippines",
+    roles: [
+      { title: "Part-Time Instructor", period: "June 2019 – March 2020" },
+    ],
+    highlights: [
+      "Taught foundational Math and Science courses to students in the Information Systems program.",
+      "Helped students in their understanding and academic success in core subjects.",
+    ],
+  },
+  // {
+  //   company:
+  //     "Various Colleges and Universities across NCR, Region III, IV, and V",
+  //   location:
+  //     "Various Colleges and Universities across NCR, Region III, IV, and V",
+  //   roles: [{ title: "Visiting Lecturer", period: "May 2013 – June 2023" }],
+  //   highlights: [
+  //     "Partnered with academic institutions to strengthen board exam readiness among graduating engineering students.",
+  //     "Conducted intensive review sessions and strategy-based lectures tailored to institutional needs and student performance trends.",
+  //     "Contributed to improved licensure exam outcomes, with many partner schools.",
+  //   ],
+  // },
+];

@@ -4,6 +4,7 @@ import Landing from "../sections/landing/Landing";
 import Project from "../sections/projects/Project";
 import SideHero from "../components/SideHero";
 import useStickySideHero from "../hooks/useStickySideHero";
+import Experiences from "../sections/experiences/Experiences";
 
 const Main = () => {
   const landingRef = useRef();
@@ -36,11 +37,9 @@ const Main = () => {
         >
           <SideHero isVisible={isVisible} />
         </Box>
-        <Stack flex={2} width={1}>
+        <Stack flex={2} width={1} direction="column">
           <Project />
-          <Box height="150vh" id="experiences" className="outlined2">
-            experiences
-          </Box>
+          <Experiences />
         </Stack>
       </Stack>
       <Box height="150vh" id="about" className="outlined">

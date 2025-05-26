@@ -24,9 +24,18 @@ const NavBar = () => {
   return (
     <AppBar sx={{ maxHeight: "80px" }} elevation={0}>
       <Toolbar sx={{ backgroundColor: (theme) => theme.palette.black.main }}>
-        <Stack direction="row" justifyContent="space-between" width={1}>
+        <Stack
+          direction="row"
+          justifyContent="space-between"
+          width={1}
+          alignItems="center"
+        >
           <Link href={`#`}>
-            <Typography variant="h3" fontWeight="bold" color="primary">
+            <Typography
+              variant={isInMobile ? "h5" : "h4"}
+              fontWeight="bold"
+              color="primary"
+            >
               RM
             </Typography>
           </Link>

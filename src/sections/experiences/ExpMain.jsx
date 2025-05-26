@@ -1,10 +1,8 @@
 import SectionTitle from "../../components/SectionTitle";
-import { Box, Stack, Tab, Tabs, Typography } from "@mui/material";
+import { Box, Stack, Tab, Tabs } from "@mui/material";
 import Experience from "./Experience";
 import { useState } from "react";
-import ExpPanel from "./ExpPanel";
 import useIsInMobile from "../../hooks/useIsInMobile";
-import ExpMainMobile from "./ExpMainMobile";
 import ExperienceMobile from "./ExperienceMobile";
 
 const prepExpTabs = (experiences) => {
@@ -50,10 +48,6 @@ const ExpMain = ({ experiences }) => {
               minHeight: "500px",
               minWidth: 180,
               overflowY: "auto",
-
-              // ".MuiTabs-indicator": {
-              //   width: "0px",
-              // },
             }}
             scrollButtons="auto"
             aria-label="work experience tabs"
@@ -81,7 +75,6 @@ const ExpMain = ({ experiences }) => {
           </Box>
         </Box>
       )}
-      {/* Render the selected experience */}
     </Box>
   );
 };

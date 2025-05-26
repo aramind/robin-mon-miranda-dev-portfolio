@@ -34,7 +34,7 @@ const Main = () => {
             pl: 10,
           }}
         >
-          <SideHero />
+          <SideHero isVisible={isVisible} />
         </Box>
         <Box flex={2}>
           <Project />

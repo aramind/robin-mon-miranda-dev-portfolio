@@ -15,7 +15,7 @@ const useStickySideHero = (landingRef) => {
       const landingBottom = landing.getBoundingClientRect().bottom;
 
       console.log(landingBottom);
-      const visible = landingBottom < 500;
+      const visible = landingBottom < 80;
       setIsVisible(visible);
 
       // Stick SideHero to top 80px only if visible

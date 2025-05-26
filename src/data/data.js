@@ -10,13 +10,6 @@ export const projects = [
     description: "A full-stack web app for managing shared living spaces.",
     details:
       "CASSI is a full-stack web application designed to help house occupants manage their shared living space more efficiently. It includes features like user authentication, occupant management, activity trackers, task creation, reminders, to-do lists, and announcements. Currently in development are features such as automated alerts for upcoming due dates and the ability to upload and store important files.",
-    // images: [
-    //   "/assets/cassi/1.png",
-    //   "/assets/cassi/2.png",
-    //   "/assets/cassi/3.png",
-    //   "/assets/cassi/4.png",
-    //   "/assets/cassi/5.png",
-    // ],
     images: generateImageUrls("/assets/cassi", "png", 5),
     stack: [
       "html",

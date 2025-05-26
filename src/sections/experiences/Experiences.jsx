@@ -1,14 +1,15 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import useIsInMobile from "../../hooks/useIsInMobile";
 import { Box, Stack } from "@mui/material";
 import ExpMain from "./ExpMain";
 import { experiences } from "../../data/data";
 import ExpMainMobile from "./ExpMainMobile";
 
-const Experiences = () => {
+const Experiences = forwardRef((_, ref) => {
   const isInMobile = useIsInMobile();
   return (
     <Stack
+      ref={ref}
       id="experiences"
       component="section"
       px={{ xs: 2, md: 10 }}
@@ -23,6 +24,6 @@ const Experiences = () => {
       </Box>
     </Stack>
   );
-};
+});
 
 export default Experiences;

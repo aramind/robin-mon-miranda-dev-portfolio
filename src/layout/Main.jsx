@@ -8,7 +8,11 @@ import Experiences from "../sections/experiences/Experiences";
 
 const Main = () => {
   const landingRef = useRef();
-  const { isSticky, isVisible } = useStickySideHero(landingRef);
+  const experiencesRef = useRef();
+  const { isSticky, isVisible } = useStickySideHero({
+    landingRef,
+    experiencesRef,
+  });
 
   console.log(isSticky);
   console.log(isVisible);
@@ -39,7 +43,7 @@ const Main = () => {
         </Box>
         <Stack flex={2} width={1} direction="column">
           <Project />
-          <Experiences />
+          <Experiences ref={experiencesRef} />
         </Stack>
       </Stack>
       <Box height="150vh" id="about" className="outlined">

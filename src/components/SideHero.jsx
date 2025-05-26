@@ -2,7 +2,7 @@ import { Box, Button, Stack, Typography } from "@mui/material";
 
 const SideHero = () => {
   return (
-    <Box width={1} height={1} alignContent="center">
+    <Box width={1} height={1} alignContent="center" className="outlined">
       <Typography
         fontSize={{ xs: "2rem", md: "2.5rem" }}
         // variant={isInMobile ? "h5" : "h4"}

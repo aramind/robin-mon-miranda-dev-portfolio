@@ -35,6 +35,7 @@ const darkTheme = createTheme({
     fontFamily: `"Inter", "Nunito Sans", "Roboto", sans-serif`,
     condensed: `"Barlow Condensed", sans-serif`,
     poppins: `"Poppins", sans-serif`,
+    nunito: `"Nunito Sans", sans-serif`,
   },
   components: {
     MuiLink: {

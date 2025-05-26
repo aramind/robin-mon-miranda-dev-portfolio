@@ -1,6 +1,4 @@
 import { Box, Stack } from "@mui/material";
-import React from "react";
-import SideHero from "../../components/SideHero";
 import ProjectMain from "./ProjectMain";
 
 const Project = () => {
@@ -8,16 +6,13 @@ const Project = () => {
     <Stack
       id="projects"
       component="section"
-      className="outlined"
-      px={2}
-      pl={{ md: 10 }}
+      px={10}
       justifyContent="flex-start"
       direction="row"
-      height="100vh"
+      minHeight="100vh"
+      spacing={4}
     >
-      <Box flex={1}>
-        <SideHero />
-      </Box>
+      <Box flex={1} />
       <Box flex={2}>
         <ProjectMain />
       </Box>

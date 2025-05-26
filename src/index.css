@@ -35,6 +35,9 @@ section {
   text-transform: uppercase;
 }
 
+.condensedText {
+  font-family: "Barlow Condensed", sans-serif;
+}
 /* for testing */
 .outlined {
   border: 1px solid red;

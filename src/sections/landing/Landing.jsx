@@ -1,16 +1,19 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
 import useIsInMobile from "../../hooks/useIsInMobile";
+import { forwardRef } from "react";
 
-const Landing = () => {
+const Landing = forwardRef((_, ref) => {
   const isInMobile = useIsInMobile();
   return (
     <Box
+      ref={ref}
       px={2}
       height="80vh"
       pl={{ md: 10 }}
       alignContent="center"
       direction="row"
       width={{ xs: "100%", md: "70vw" }}
+      id="landing"
     >
       <Stack>
         <Typography fontSize="1.1rem">Hi, my name is</Typography>
@@ -52,6 +55,6 @@ const Landing = () => {
       </Stack>
     </Box>
   );
-};
+});
 
 export default Landing;

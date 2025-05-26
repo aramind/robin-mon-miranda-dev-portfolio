@@ -3,7 +3,6 @@ import useIsInMobile from "../../hooks/useIsInMobile";
 import { Box, Stack } from "@mui/material";
 import ExpMain from "./ExpMain";
 import { experiences } from "../../data/data";
-import ExpMainMobile from "./ExpMainMobile";
 
 const Experiences = forwardRef((_, ref) => {
   const isInMobile = useIsInMobile();

@@ -6,6 +6,7 @@ import SideHero from "../components/SideHero";
 import useStickySideHero from "../hooks/useStickySideHero";
 import Experiences from "../sections/experiences/Experiences";
 import About from "../sections/about/About";
+import Contact from "../sections/contact/Contact";
 
 const Main = () => {
   const landingRef = useRef();
@@ -49,9 +50,7 @@ const Main = () => {
       </Stack>
       <br />
       <About />
-      <Box height="100vh" id="contact">
-        contact
-      </Box>
+      <Contact />
     </Box>
   );
 };

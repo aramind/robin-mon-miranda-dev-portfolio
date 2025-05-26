@@ -18,15 +18,9 @@ const Experiences = () => {
       spacing={4}
     >
       {!isInMobile && <Box flex={1} />}
-      {isInMobile ? (
-        <Box flex={1}>
-          <ExpMainMobile experiences={experiences} />
-        </Box>
-      ) : (
-        <Box flex={isInMobile ? 1 : 2}>
-          <ExpMain experiences={experiences} />
-        </Box>
-      )}
+      <Box flex={isInMobile ? 1 : 2}>
+        <ExpMain experiences={experiences} />
+      </Box>
     </Stack>
   );
 };

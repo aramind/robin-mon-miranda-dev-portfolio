@@ -7,9 +7,8 @@ const JobRole = ({ title, period }) => {
       <Typography
         component="span"
         display="inline"
-        color="primary"
-        fontSize="1.2rem"
-        fontWeight="bold"
+        color={{ xs: "primary.light", md: "primary.main" }}
+        fontWeight={{ md: "bold" }}
       >
         {title}
       </Typography>

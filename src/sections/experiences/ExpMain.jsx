@@ -1,8 +1,11 @@
 import SectionTitle from "../../components/SectionTitle";
-import { Box, Tab, Tabs, Typography } from "@mui/material";
+import { Box, Stack, Tab, Tabs, Typography } from "@mui/material";
 import Experience from "./Experience";
 import { useState } from "react";
 import ExpPanel from "./ExpPanel";
+import useIsInMobile from "../../hooks/useIsInMobile";
+import ExpMainMobile from "./ExpMainMobile";
+import ExperienceMobile from "./ExperienceMobile";
 
 const prepExpTabs = (experiences) => {
   const expTabs = experiences?.map((exp, index) => ({
@@ -13,6 +16,8 @@ const prepExpTabs = (experiences) => {
 };
 
 const ExpMain = ({ experiences }) => {
+  const isInMobile = useIsInMobile();
+
   const [selectedExp, setSelectedExp] = useState(0);
 
   const handleChange = (e, newValue) => {
@@ -26,48 +31,56 @@ const ExpMain = ({ experiences }) => {
     <Box width={1} height={1}>
       <SectionTitle title="Where I've worked" />
       <br />
-      <Box sx={{ display: "flex", flexDirection: "row", mt: 2 }} px={4}>
-        <Tabs
-          orientation="vertical"
-          variant="scrollable"
-          value={selectedExp}
-          onChange={handleChange}
-          sx={{
-            borderRight: 1,
-            borderColor: (theme) => theme.palette.black.light,
-            minHeight: "500px",
-            minWidth: 180,
-            overflowY: "auto",
+      {isInMobile ? (
+        <Stack spacing={2}>
+          {experiences?.map((exp, index) => (
+            <ExperienceMobile key={index} exp={exp} />
+          ))}
+        </Stack>
+      ) : (
+        <Box sx={{ display: "flex", flexDirection: "row", mt: 2 }} px={4}>
+          <Tabs
+            orientation="vertical"
+            variant="scrollable"
+            value={selectedExp}
+            onChange={handleChange}
+            sx={{
+              borderRight: 1,
+              borderColor: (theme) => theme.palette.black.light,
+              minHeight: "500px",
+              minWidth: 180,
+              overflowY: "auto",
 
-            // ".MuiTabs-indicator": {
-            //   width: "0px",
-            // },
-          }}
-          scrollButtons="auto"
-          aria-label="work experience tabs"
-        >
-          {preparedExpTabs &&
-            preparedExpTabs?.map((exp, index) => (
-              <Tab
-                key={index}
-                label={exp?.label}
-                sx={{
-                  color: (theme) => theme.palette.white.main,
-                  alignItems: "flex-start",
-                  textAlign: "left",
-                  "&.Mui-selected": {
-                    color: (theme) => theme.palette.primary.main,
-                    fontWeight: "bold",
-                    backgroundColor: (theme) => theme.palette.black.light,
-                  },
-                }}
-              />
-            ))}
-        </Tabs>
-        <Box sx={{ ml: 4, flex: 1 }}>
-          {preparedExpTabs?.[selectedExp]?.component}
+              // ".MuiTabs-indicator": {
+              //   width: "0px",
+              // },
+            }}
+            scrollButtons="auto"
+            aria-label="work experience tabs"
+          >
+            {preparedExpTabs &&
+              preparedExpTabs?.map((exp, index) => (
+                <Tab
+                  key={index}
+                  label={exp?.label}
+                  sx={{
+                    color: (theme) => theme.palette.white.main,
+                    alignItems: "flex-start",
+                    textAlign: "left",
+                    "&.Mui-selected": {
+                      color: (theme) => theme.palette.primary.main,
+                      fontWeight: "bold",
+                      backgroundColor: (theme) => theme.palette.black.light,
+                    },
+                  }}
+                />
+              ))}
+          </Tabs>
+          <Box sx={{ ml: 4, flex: 1 }}>
+            {preparedExpTabs?.[selectedExp]?.component}
+          </Box>
         </Box>
-      </Box>
+      )}
       {/* Render the selected experience */}
     </Box>
   );

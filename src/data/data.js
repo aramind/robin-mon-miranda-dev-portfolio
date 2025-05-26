@@ -77,8 +77,8 @@ export const experiences = [
     company: "PERCDC Learnhub",
     location: "Manila, Cebu, and Cavite, Philippines",
     roles: [
-      { title: "Asst. Review Director", period: "May 2015 - April 2025" },
-      { title: "Review Mentor", period: "May 2013 - April 2025" },
+      { title: "Asst. Review Director", period: "May 2015 - Apr 2025" },
+      { title: "Review Mentor", period: "May 2013 - Apr 2025" },
     ],
     highlights: [
       "Mentored over 5,000 Electronics Engineering (ECE) graduates, guiding them in preparation for the ECE and/or ECT licensure examinations with a high success rate.",
@@ -93,8 +93,8 @@ export const experiences = [
     company: "PUP Manila",
     location: "Manila, Philippines",
     roles: [
-      { title: "Full-time Instructor", period: "June 2022 – Feb 2025" },
-      { title: "Part-time Instructor", period: "June 2016 – June 2022" },
+      { title: "Full-time Instructor", period: "Jun 2022 – Feb 2025" },
+      { title: "Part-time Instructor", period: "Jun 2016 – Jun 2022" },
     ],
     highlights: [
       "Taught and mentored over 3,000 students in Electronics, Electrical, and Mechanical Engineering programs, delivering in-depth instruction in electronics and communication systems.",
@@ -106,9 +106,7 @@ export const experiences = [
   {
     company: "Universal College of Parañaque",
     location: "Parañaque, Philippines",
-    roles: [
-      { title: "Part-time Instructor", period: "January 2017 – March 2023" },
-    ],
+    roles: [{ title: "Part-time Instructor", period: "Jan 2017 – Mar 2023" }],
     highlights: [
       "Delivered instruction in mathematics, allied sciences, electronics, and communication systems to students in the ECE, EE, IE, and CpE programs, fostering both theoretical understanding and practical application.",
       "Played a key role in preparing graduating students—especially in the ECE and EE departments—for licensure exams, contributing to the school’s consistently above-national average passing rates.",
@@ -121,7 +119,7 @@ export const experiences = [
     roles: [
       {
         title: "Academic Content Developer & Evaluator",
-        period: "January 2016 – December 2023",
+        period: "Jan 2016 – Dec 2023",
       },
     ],
     highlights: [
@@ -133,9 +131,7 @@ export const experiences = [
   {
     company: "ACLC College of Manila",
     location: "Manila, Philippines",
-    roles: [
-      { title: "Part-Time Instructor", period: "June 2019 – March 2020" },
-    ],
+    roles: [{ title: "Part-Time Instructor", period: "Jun 2019 – Mar 2020" }],
     highlights: [
       "Taught foundational Math and Science courses to students in the Information Systems program.",
       "Helped students in their understanding and academic success in core subjects.",

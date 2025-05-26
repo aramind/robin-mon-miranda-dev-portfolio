@@ -2,12 +2,12 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import useIsInMobile from "../../hooks/useIsInMobile";
 import CTAButtons from "../../components/CTAButtons";
+import PersonalDetails from "./PersonalDetails";
 
 const Contact = () => {
   const isInMobile = useIsInMobile();
   return (
     <Box
-      className="outlined"
       height="100vh"
       mb={2}
       id="contact"
@@ -16,6 +16,7 @@ const Contact = () => {
       px={2}
       width={{ xs: 1, md: "45rem" }}
       mx="auto"
+      pb="4rem"
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -43,6 +44,9 @@ const Contact = () => {
       </Typography>
       <br />
       <CTAButtons />
+      <br />
+      <br />
+      <PersonalDetails />
     </Box>
   );
 };

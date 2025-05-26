@@ -1,3 +1,10 @@
+import {
+  EmailIcon,
+  GitIcon,
+  LinkedInIcon,
+  LocationIcon,
+} from "../utils/muiIcons";
+
 const generateImageUrls = (basePath, type, count) => {
   return Array.from(
     { length: count },
@@ -167,3 +174,30 @@ export const aboutMe = {
     "git",
   ],
 };
+
+export const contactDetails = [
+  {
+    name: "email",
+    value: "r.m.miranda.ece@gmail.com",
+    link: "",
+    icon: <EmailIcon />,
+  },
+  {
+    name: "linkedin",
+    value: "robin-mon-miranda",
+    link: "https://www.linkedin.com/in/robin-mon-miranda/",
+    icon: <LinkedInIcon />,
+  },
+  {
+    name: "location",
+    value: "Manila, Philippines",
+    link: "https://maps.app.goo.gl/tcxV3H5uVa5gf4Hf8",
+    icon: <LocationIcon />,
+  },
+  {
+    name: "github",
+    value: "aramind",
+    link: "https://github.com/aramind",
+    icon: <GitIcon />,
+  },
+];

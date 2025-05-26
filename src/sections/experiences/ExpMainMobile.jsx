@@ -1,6 +1,4 @@
-import { Box, Stack, Typography } from "@mui/material";
-import React from "react";
-import ExpMain from "./ExpMain";
+import { Box, Stack } from "@mui/material";
 import ExperienceMobile from "./ExperienceMobile";
 import SectionTitle from "../../components/SectionTitle";
 

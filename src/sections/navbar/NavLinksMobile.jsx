@@ -10,6 +10,8 @@ import {
 import React, { useState } from "react";
 import useActiveSection from "../../hooks/useActiveSection";
 import { HamburgerIcon } from "../../utils/muiIcons";
+import { links } from "../../data/data";
+import ResumeButton from "../../components/ResumeButton";
 
 const NavLinksMobile = ({ sections }) => {
   const [anchorMenu, setAnchorMenu] = useState(null);
@@ -60,7 +62,7 @@ const NavLinksMobile = ({ sections }) => {
         ))}
 
         <Box width={1} className="centered" my={2}>
-          <Button variant="outlined">resume</Button>
+          <ResumeButton />
         </Box>
       </Menu>
     </>

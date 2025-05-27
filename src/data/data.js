@@ -204,3 +204,8 @@ export const contactDetails = [
 
 export const sendMessageURL =
   "https://ilms-6l0w.onrender.com/v1/special/messages/dev/master";
+
+export const links = {
+  resume:
+    "https://drive.google.com/file/d/118Do2i__BE9iW-Ugsui91sbZb9wJGOdt/view?usp=sharing",
+};

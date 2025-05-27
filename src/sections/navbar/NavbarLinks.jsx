@@ -1,6 +1,8 @@
-import { Button, Link, Stack, Typography } from "@mui/material";
+import { Link, Stack, Typography } from "@mui/material";
 import React from "react";
 import useActiveSection from "../../hooks/useActiveSection";
+
+import ResumeButton from "../../components/ResumeButton";
 
 const NavbarLinks = ({ sections }) => {
   const active = useActiveSection(sections.map((s) => s.name));
@@ -28,7 +30,7 @@ const NavbarLinks = ({ sections }) => {
           </Typography>
         </Link>
       ))}
-      <Button variant="outlined">resume</Button>
+      <ResumeButton />
     </Stack>
   );
 };

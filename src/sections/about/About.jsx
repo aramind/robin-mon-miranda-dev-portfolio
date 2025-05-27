@@ -55,7 +55,7 @@ const About = () => {
         >
           ROBIN MON MIRANDA
         </Typography>
-        <Stack
+        {/* <Stack
           direction="row"
           spacing={1}
           justifyContent="center"
@@ -77,7 +77,7 @@ const About = () => {
               />
             </>
           )}
-        </Stack>
+        </Stack> */}
         <ParagraphWrapper>
           I come from a background in{" "}
           <Highlighted>electronics engineering</Highlighted>, with years of

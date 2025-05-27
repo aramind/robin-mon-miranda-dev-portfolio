@@ -8,6 +8,8 @@ import Experiences from "../sections/experiences/Experiences";
 import About from "../sections/about/About";
 import Contact from "../sections/contact/Contact";
 import SendMessageDialog from "../components/SendMessageDialog";
+import axios from "axios";
+import { sendMessageURL } from "../data/data";
 
 const Main = () => {
   const [openMessageDialog, setOpeMessageDialog] = useState(false);
@@ -27,6 +29,16 @@ const Main = () => {
 
   const handleCloseMessageDialog = () => {
     setOpeMessageDialog(false);
+  };
+
+  // api
+  const sendMessageRequest = async (formData) => {
+    try {
+      const res = await axios.post(sendMessageURL, formData);
+      console.log(res);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
@@ -70,6 +82,7 @@ const Main = () => {
       <SendMessageDialog
         open={openMessageDialog}
         setOpen={setOpeMessageDialog}
+        sendMessageRequest={sendMessageRequest}
         // handleCloseMessageDialog={handleCloseMessageDialog}
       />
     </Box>

@@ -1,8 +1,9 @@
 import React, { useCallback, useState } from "react";
 import ConfirmActionDialog from "../components/ConfirmActionDialog";
+import useIsInMobile from "./useIsInMobile";
 
-const useConfirmActionDialog = ({ maxWidth }) => {
-  const [open, setOpen] = useState(false);
+const useConfirmActionDialog = (setOpenParentDialog) => {
+  const [openConfirm, setOpenConfirm] = useState(false);
   const [dialogProps, setDialogProps] = useState({
     title: "",
     content: "",
@@ -15,30 +16,31 @@ const useConfirmActionDialog = ({ maxWidth }) => {
       content,
       confirmCallback,
     });
-    setOpen(true);
+    setOpenConfirm(true);
   }, []);
 
   const handleClose = useCallback(() => {
-    setOpen(false);
-  }, []);
+    setOpenConfirm(false);
+    setOpenParentDialog(false);
+  }, [setOpenParentDialog]);
 
   const handleConfirm = useCallback(() => {
     dialogProps.confirmCallback();
-    setOpen(false);
-  }, [dialogProps]);
+    setOpenParentDialog(false);
+  }, [dialogProps, setOpenParentDialog]);
 
   const renderConfirmActionDialog = useCallback(() => {
     return (
       <ConfirmActionDialog
-        open={open}
-        setOpen={setOpen}
+        open={openConfirm}
+        setOpen={setOpenConfirm}
         title={dialogProps?.title}
         content={dialogProps.content}
         handleConfirm={handleConfirm}
-        maxWidth={maxWidth}
+        maxWidth={useIsInMobile ? "xl" : "md"}
       />
     );
-  }, [dialogProps.content, dialogProps?.title, handleConfirm, maxWidth, open]);
+  }, [dialogProps.content, dialogProps?.title, handleConfirm, openConfirm]);
 
   return { handleOpen, handleClose, renderConfirmActionDialog };
 };

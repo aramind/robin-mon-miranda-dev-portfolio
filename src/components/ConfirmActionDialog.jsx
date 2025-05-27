@@ -4,25 +4,10 @@ import {
   DialogActions,
   DialogContent,
   DialogTitle,
-  Paper,
   Stack,
 } from "@mui/material";
 import React, { useRef } from "react";
-import Draggable from "react-draggable";
 
-const DraggablePaperComponent = (props) => {
-  return (
-    <Draggable
-      handle="#draggable-dialog-title"
-      cancel={"[class*=*MuiDialogContent-root"}
-    >
-      <Paper
-        {...props}
-        sx={{ bgcolor: (theme) => theme.palette.black.light, width: "100%" }}
-      />
-    </Draggable>
-  );
-};
 const ConfirmActionDialog = ({
   open = false,
   setOpen,
@@ -42,13 +27,12 @@ const ConfirmActionDialog = ({
     <Dialog
       open={open}
       onClose={handleClose}
-      PaperComponent={DraggablePaperComponent}
       slotProps={{
         paper: { ref: dialogRef },
       }}
       maxWidth={maxWidth}
     >
-      <DialogTitle id="draggable-dialog-title">{title}</DialogTitle>
+      <DialogTitle id="dialog-title">{title}</DialogTitle>
       <DialogContent>{content}</DialogContent>
       <DialogActions>
         <Stack spacing={1} direction="row">

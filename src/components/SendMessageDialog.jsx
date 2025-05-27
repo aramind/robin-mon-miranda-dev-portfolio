@@ -1,5 +1,6 @@
 import React from "react";
 import { Controller, useForm } from "react-hook-form";
+import axios from "axios";
 
 import {
   Box,
@@ -13,9 +14,12 @@ import {
   Typography,
 } from "@mui/material";
 import useIsInMobile from "../hooks/useIsInMobile";
+import useConfirmActionDialog from "../hooks/useConfirmActionDialog";
 
-const SendMessageDialog = ({ open, setOpen }) => {
+const SendMessageDialog = ({ open, setOpen, sendMessageRequest }) => {
   const isInMobile = useIsInMobile();
+  const { handleOpen: handleConfirmSend, renderConfirmActionDialog } =
+    useConfirmActionDialog(setOpen);
   // form related
   const {
     control,
@@ -35,6 +39,11 @@ const SendMessageDialog = ({ open, setOpen }) => {
 
   const onSubmit = async (formData) => {
     console.log(formData);
+    handleConfirmSend(
+      "Confirm send",
+      "Everything good? Ready to send your message?",
+      () => sendMessageRequest(formData)
+    );
   };
 
   const handleClose = (e) => {
@@ -49,6 +58,7 @@ const SendMessageDialog = ({ open, setOpen }) => {
     e.stopPropagation();
     reset({});
   };
+
   return (
     <form noValidate>
       <Dialog
@@ -219,6 +229,7 @@ const SendMessageDialog = ({ open, setOpen }) => {
         {/* </DraggableDialog> */}
         <Box height="1rem" />
       </Dialog>
+      {renderConfirmActionDialog()}
     </form>
   );
 };

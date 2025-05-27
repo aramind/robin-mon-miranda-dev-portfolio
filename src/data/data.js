@@ -201,3 +201,6 @@ export const contactDetails = [
     icon: <GitIcon />,
   },
 ];
+
+export const sendMessageURL =
+  "https://ilms-6l0w.onrender.com/v1/special/messages/dev/master";

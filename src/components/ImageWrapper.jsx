@@ -4,8 +4,8 @@ const ImageWrapper = ({
   src,
   height = "auto",
   width = "auto",
-  maxHeight = "120px",
-  maxWidth = "200px",
+  maxHeight = "240px",
+  maxWidth = "240px",
 }) => {
   return (
     <Box

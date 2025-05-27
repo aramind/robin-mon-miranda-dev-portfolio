@@ -16,7 +16,6 @@ const Experiences = forwardRef((_, ref) => {
       direction="row"
       minHeight="100vh"
       spacing={4}
-      className="outlined"
     >
       {!isInMobile && <Box flex={1} />}
       <Box flex={isInMobile ? 1 : 2}>

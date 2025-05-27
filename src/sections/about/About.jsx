@@ -3,6 +3,7 @@ import SectionTitle from "../../components/SectionTitle";
 import { Avatar, Box, Chip, Stack, Typography } from "@mui/material";
 import useIsInMobile from "../../hooks/useIsInMobile";
 import { aboutMe } from "../../data/data";
+import ImageWrapper from "../../components/ImageWrapper";
 
 const Highlighted = ({ children }) => (
   <Box
@@ -60,24 +61,19 @@ const About = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <Box
-            height="192px"
-            width="192px"
-            // sx={{ backgroundColor: "primary.main" }}
-          >
-            <Typography>R</Typography>
-          </Box>
+          <ImageWrapper src="/assets/ilms/1.png" height="192px" width="192px" />
+
           {!isInMobile && (
             <>
-              <Box
+              <ImageWrapper
+                src="/assets/ilms/2.png"
                 height="192px"
                 width="192px"
-                sx={{ backgroundColor: "primary.main" }}
               />
-              <Box
+              <ImageWrapper
+                src="/assets/ilms/3.png"
                 height="192px"
                 width="192px"
-                sx={{ backgroundColor: "primary.main" }}
               />
             </>
           )}

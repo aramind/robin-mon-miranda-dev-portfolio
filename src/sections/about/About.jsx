@@ -3,7 +3,9 @@ import SectionTitle from "../../components/SectionTitle";
 import { Avatar, Box, Chip, Stack, Typography } from "@mui/material";
 // import useIsInMobile from "../../hooks/useIsInMobile";
 import { aboutMe } from "../../data/data";
-import ImageWrapper from "../../components/ImageWrapper";
+import useIsInMobile from "../../hooks/useIsInMobile";
+import ImageForLargeScreen from "./ImageForLargeScreen";
+import ImageForMobileScreen from "./ImageForMobileScreen";
 
 const Highlighted = ({ children }) => (
   <Box
@@ -28,7 +30,7 @@ const ParagraphWrapper = ({ children }) => (
 
 const techStack = aboutMe?.stack;
 const About = () => {
-  // const isInMobile = useIsInMobile();
+  const isInMobile = useIsInMobile();
   return (
     <Box
       width={1}
@@ -62,31 +64,7 @@ const About = () => {
           alignItems="center"
           // className="outlined"
         >
-          <ImageWrapper
-            src="/assets/about/profile.png"
-            height="240px"
-            width="240px"
-          />
-          {/* <Box
-            height={{ xs: "200px", md: "240px" }}
-            width={{ xs: "200px", md: "240px" }}
-            sx={{ backgroundColor: (theme) => theme.palette.primary.main }}
-          /> */}
-
-          {/* {!isInMobile && (
-            <>
-              <ImageWrapper
-                src="/assets/ilms/2.png"
-                height="192px"
-                width="192px"
-              />
-              <ImageWrapper
-                src="/assets/ilms/3.png"
-                height="192px"
-                width="192px"
-              />
-            </>
-          )} */}
+          {isInMobile ? <ImageForMobileScreen /> : <ImageForLargeScreen />}
         </Stack>
         <ParagraphWrapper>
           I come from a background in{" "}

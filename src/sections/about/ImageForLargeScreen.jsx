@@ -2,7 +2,8 @@ import React from "react";
 import ImageWrapper from "../../components/ImageWrapper";
 import { Box } from "@mui/material";
 
-const syncTransition = "opacity 0.8s ease";
+const syncTransition = "opacity 1s ease-in-out";
+
 const BoxOutline = ({ isAbove }) => (
   <Box
     className={isAbove ? "top-outline" : "bottom-outline"}
@@ -10,12 +11,14 @@ const BoxOutline = ({ isAbove }) => (
     width="240px"
     height="240px"
     sx={{
-      // backgroundColor: (theme) => theme.palette.black.main,
-      outline: "2px solid",
+      transition: syncTransition,
+      backgroundColor: (theme) => theme.palette.primary.main,
+      opacity: isAbove ? 0.2 : 0,
+      //   outline: "2px solid",
       outlineColor: (theme) => theme.palette.primary.main,
-      top: "10px", // push background down
-      right: "10px", // push background right
-      zIndex: isAbove ? 2 : 0,
+      top: isAbove ? "-10px" : "10px", // push background down
+      right: isAbove ? "10px" : "10px", // push background right
+      zIndex: isAbove ? 3 : 0,
       borderRadius: "8px", // optional, for soft corners
     }}
   />
@@ -36,6 +39,10 @@ const ImageForLargeScreen = () => {
           display: "inline-block",
           cursor: "pointer",
           // When hovering this container:
+          "&:hover .bottom-outline": {
+            opacity: 0.2,
+            transition: syncTransition,
+          },
           "&:hover .top-outline": {
             opacity: 0,
             transition: syncTransition,
@@ -86,6 +93,7 @@ const ImageForLargeScreen = () => {
             src="/assets/about/profile.png"
             height="240px"
             width="240px"
+            style={{ zIndex: 0, position: "relative" }} // explicitly behind
           />
           <Box
             className="tint-overlay"
@@ -95,10 +103,11 @@ const ImageForLargeScreen = () => {
             width="100%"
             height="100%"
             sx={{
-              backgroundColor: (theme) => theme.palette.primary.dark,
+              backgroundColor: (theme) => theme.palette.primary.main,
               mixBlendMode: "multiply",
               opacity: 0.6,
-              transition: "opacity 0.3s ease",
+              transition: "opacity 0.8s ease",
+              zIndex: 1,
             }}
           />
           {/* <Box

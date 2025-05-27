@@ -1,6 +1,5 @@
 import React from "react";
-import { Controller, useForm } from "react-hook-form";
-import axios from "axios";
+import { useForm } from "react-hook-form";
 
 import {
   Box,
@@ -10,31 +9,28 @@ import {
   DialogContent,
   DialogTitle,
   Stack,
-  TextField,
   Typography,
 } from "@mui/material";
 import useIsInMobile from "../hooks/useIsInMobile";
 import useConfirmActionDialog from "../hooks/useConfirmActionDialog";
+import ControlledTextField from "./ControlledTextField";
+
+const defaultFormValues = {
+  name: "",
+  company: "",
+  email: "",
+  subject: "",
+  message: "",
+};
 
 const SendMessageDialog = ({ open, setOpen, sendMessageRequest }) => {
   const isInMobile = useIsInMobile();
   const { handleOpen: handleConfirmSend, renderConfirmActionDialog } =
     useConfirmActionDialog(setOpen);
   // form related
-  const {
-    control,
-    reset,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
+  const { control, reset, handleSubmit } = useForm({
     mode: "onTouched",
-    defaultValues: {
-      name: "",
-      company: "",
-      email: "",
-      subject: "",
-      message: "",
-    },
+    defaultValues: defaultFormValues,
   });
 
   const onSubmit = async (formData) => {
@@ -49,14 +45,14 @@ const SendMessageDialog = ({ open, setOpen, sendMessageRequest }) => {
   const handleClose = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    reset({});
+    reset(defaultFormValues);
     setOpen(false);
   };
 
   const handleClear = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    reset({});
+    reset(defaultFormValues);
   };
 
   return (
@@ -65,6 +61,15 @@ const SendMessageDialog = ({ open, setOpen, sendMessageRequest }) => {
         open={open}
         onClose={handleClose}
         fullWidth
+        slotProps={{
+          paper: {
+            sx: {
+              backgroundColor: (theme) => theme.palette.white.dark,
+              color: (theme) => theme.palette.white.dark,
+              borderRadius: 2,
+            },
+          },
+        }}
         maxWidth={isInMobile ? "xl" : "md"}
       >
         <DialogTitle id="send-message-dialog">
@@ -77,40 +82,31 @@ const SendMessageDialog = ({ open, setOpen, sendMessageRequest }) => {
             Let's Connect
           </Typography>
         </DialogTitle>
-        <DialogContent>
-          <Stack spacing={2}>
+
+        <DialogContent
+          sx={{
+            overflow: "visible",
+          }}
+        >
+          <Stack spacing={2} py={2}>
             <Stack direction={{ xs: "column", md: "row" }} spacing={2}>
-              <Controller
+              <ControlledTextField
                 name="name"
                 control={control}
+                label="Name"
                 rules={{ required: "Name is required" }}
-                render={({ field }) => (
-                  <TextField
-                    {...field}
-                    label="Name"
-                    fullWidth
-                    error={!!errors.name}
-                    helperText={errors.name?.message}
-                    // size={{ xs: "small", md: "medium" }}
-                  />
-                )}
               />
-              <Controller
+              <ControlledTextField
                 name="company"
                 control={control}
-                render={({ field }) => (
-                  <TextField
-                    {...field}
-                    label="Company"
-                    fullWidth
-                    // size={{ xs: "small", md: "medium" }}
-                  />
-                )}
+                label="Company"
               />
             </Stack>
-            <Controller
+            <ControlledTextField
               name="email"
               control={control}
+              label="Email"
+              type="email"
               rules={{
                 required: "Email is required",
                 pattern: {
@@ -118,49 +114,20 @@ const SendMessageDialog = ({ open, setOpen, sendMessageRequest }) => {
                   message: "Invalid email address",
                 },
               }}
-              render={({ field }) => (
-                <TextField
-                  {...field}
-                  label="Email"
-                  type="email"
-                  fullWidth
-                  error={!!errors.email}
-                  helperText={errors.email?.message}
-                  //   size={{ xs: "small", md: "medium" }}
-                />
-              )}
             />
-            <Controller
+            <ControlledTextField
               name="subject"
               control={control}
+              label="Subject"
               rules={{ required: "Subject is required" }}
-              render={({ field }) => (
-                <TextField
-                  {...field}
-                  label="Subject"
-                  fullWidth
-                  error={!!errors.subject}
-                  helperText={errors.subject?.message}
-                  //   size={{ xs: "small", md: "medium" }}
-                />
-              )}
             />
-            <Controller
+            <ControlledTextField
               name="message"
               control={control}
+              label="Message"
+              multiline
+              rows={4}
               rules={{ required: "Message is required" }}
-              render={({ field }) => (
-                <TextField
-                  {...field}
-                  label="Message"
-                  multiline
-                  rows={4}
-                  fullWidth
-                  error={!!errors.message}
-                  helperText={errors.message?.message}
-                  //   size={{ xs: "small", md: "medium" }}
-                />
-              )}
             />
           </Stack>
         </DialogContent>
@@ -184,11 +151,11 @@ const SendMessageDialog = ({ open, setOpen, sendMessageRequest }) => {
                 "&:hover": {
                   borderColor: (theme) => theme.palette.primary.dark,
                   color: (theme) => theme.palette.primary.dark,
-                  backgroundColor: (theme) => theme.palette.white.light,
+                  backgroundColor: (theme) => theme.palette.white.dark,
                 },
               }}
             >
-              Cancel
+              CANCEL
             </Button>
             <Button
               onClick={handleClear}
@@ -201,11 +168,11 @@ const SendMessageDialog = ({ open, setOpen, sendMessageRequest }) => {
                 "&:hover": {
                   borderColor: (theme) => theme.palette.primary.dark,
                   color: (theme) => theme.palette.primary.dark,
-                  backgroundColor: (theme) => theme.palette.white.light,
+                  backgroundColor: (theme) => theme.palette.white.dark,
                 },
               }}
             >
-              Clear
+              CLEAR
             </Button>
             <Button
               //   type="submit"
@@ -219,10 +186,11 @@ const SendMessageDialog = ({ open, setOpen, sendMessageRequest }) => {
                 color: (theme) => theme.palette.white.main,
                 "&:hover": {
                   backgroundColor: (theme) => theme.palette.primary.main,
+                  color: (theme) => theme.palette.black.dark,
                 },
               }}
             >
-              Send
+              SEND
             </Button>
           </Stack>
         </DialogActions>

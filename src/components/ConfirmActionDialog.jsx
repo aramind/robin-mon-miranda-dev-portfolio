@@ -13,7 +13,6 @@ const ConfirmActionDialog = ({
   setOpen,
   title = "",
   content = "",
-  handleReset,
   handleConfirm,
   maxWidth = "md",
 }) => {
@@ -28,19 +27,24 @@ const ConfirmActionDialog = ({
       open={open}
       onClose={handleClose}
       slotProps={{
-        paper: { ref: dialogRef },
+        paper: {
+          ref: dialogRef,
+          sx: {
+            backgroundColor: (theme) => theme.palette.black.main,
+            color: (theme) => theme.palette.white.dark,
+            borderRadius: 2,
+            p: 1,
+          },
+        },
       }}
       maxWidth={maxWidth}
     >
       <DialogTitle id="dialog-title">{title}</DialogTitle>
       <DialogContent>{content}</DialogContent>
       <DialogActions>
-        <Stack spacing={1} direction="row">
+        <Stack spacing={2} direction="row">
           <Button variant="outlined" onClick={() => setOpen(false)}>
-            cancel
-          </Button>
-          <Button variant="outlined" onClick={handleReset}>
-            reset
+            CANCEL
           </Button>
           <Button
             variant="contained"
@@ -49,7 +53,7 @@ const ConfirmActionDialog = ({
               setOpen(false);
             }}
           >
-            confirm
+            CONFIRM
           </Button>
         </Stack>
       </DialogActions>

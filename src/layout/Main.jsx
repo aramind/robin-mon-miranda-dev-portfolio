@@ -10,9 +10,15 @@ import Contact from "../sections/contact/Contact";
 import SendMessageDialog from "../components/SendMessageDialog";
 import axios from "axios";
 import { sendMessageURL } from "../data/data";
+import FeedbackNotif from "../components/FeedbackNotif";
 
 const Main = () => {
   const [openMessageDialog, setOpeMessageDialog] = useState(false);
+  const [snackbarStates, setSnackbarStates] = useState({
+    open: false,
+    message: "",
+    severity: "success",
+  });
 
   const landingRef = useRef();
   const experiencesRef = useRef();
@@ -23,6 +29,9 @@ const Main = () => {
 
   // handlers
 
+  const handleCloseSnackbar = () => {
+    setSnackbarStates((prev) => ({ ...prev, open: false }));
+  };
   const handleOpenMessageDialog = () => {
     setOpeMessageDialog(true);
   };
@@ -31,9 +40,22 @@ const Main = () => {
   const sendMessageRequest = async (formData) => {
     try {
       const res = await axios.post(sendMessageURL, formData);
-      console.log(res);
+
+      setSnackbarStates({
+        open: true,
+        message: res?.data?.message,
+        severity: res?.data?.success ? "success" : "error",
+      });
+      if (res?.data?.success) {
+        setOpeMessageDialog(false);
+      }
     } catch (error) {
       console.error(error);
+      setSnackbarStates({
+        open: true,
+        message: "Something went wrong. Please try again.",
+        severity: "error",
+      });
     }
   };
 
@@ -80,6 +102,12 @@ const Main = () => {
         setOpen={setOpeMessageDialog}
         sendMessageRequest={sendMessageRequest}
         // handleCloseMessageDialog={handleCloseMessageDialog}
+      />
+      <FeedbackNotif
+        open={snackbarStates?.open}
+        message={snackbarStates?.message}
+        severity={snackbarStates?.severity}
+        onClose={handleCloseSnackbar}
       />
     </Box>
   );

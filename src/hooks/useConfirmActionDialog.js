@@ -21,13 +21,11 @@ const useConfirmActionDialog = (setOpenParentDialog) => {
 
   const handleClose = useCallback(() => {
     setOpenConfirm(false);
-    setOpenParentDialog(false);
-  }, [setOpenParentDialog]);
+  }, []);
 
   const handleConfirm = useCallback(() => {
     dialogProps.confirmCallback();
-    setOpenParentDialog(false);
-  }, [dialogProps, setOpenParentDialog]);
+  }, [dialogProps]);
 
   const renderConfirmActionDialog = useCallback(() => {
     return (

@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   IconButton,
   Link,
   Menu,
@@ -10,7 +9,7 @@ import {
 import React, { useState } from "react";
 import useActiveSection from "../../hooks/useActiveSection";
 import { HamburgerIcon } from "../../utils/muiIcons";
-import { links } from "../../data/data";
+
 import ResumeButton from "../../components/ResumeButton";
 
 const NavLinksMobile = ({ sections }) => {

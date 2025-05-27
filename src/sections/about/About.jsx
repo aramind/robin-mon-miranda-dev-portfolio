@@ -1,9 +1,8 @@
-import React, { Fragment } from "react";
+import React from "react";
 import SectionTitle from "../../components/SectionTitle";
 import { Avatar, Box, Chip, Stack, Typography } from "@mui/material";
-import useIsInMobile from "../../hooks/useIsInMobile";
+// import useIsInMobile from "../../hooks/useIsInMobile";
 import { aboutMe } from "../../data/data";
-import ImageWrapper from "../../components/ImageWrapper";
 
 const Highlighted = ({ children }) => (
   <Box
@@ -28,7 +27,7 @@ const ParagraphWrapper = ({ children }) => (
 
 const techStack = aboutMe?.stack;
 const About = () => {
-  const isInMobile = useIsInMobile();
+  // const isInMobile = useIsInMobile();
   return (
     <Box
       width={1}

@@ -1,7 +1,8 @@
-import { AppBar, Box, Link, Stack, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, Link, Stack, Toolbar } from "@mui/material";
 import NavbarLinks from "./NavbarLinks";
 import useIsInMobile from "../../hooks/useIsInMobile";
 import NavLinksMobile from "./NavLinksMobile";
+import ImageWrapper from "../../components/ImageWrapper";
 
 const sections = [
   { text: "", name: "landing" },
@@ -23,13 +24,17 @@ const NavBar = () => {
           alignItems="center"
         >
           <Link href={`#`}>
-            <Typography
+            {/* <Typography
               variant={isInMobile ? "h5" : "h4"}
               fontWeight="bold"
               color="primary"
             >
               RM
-            </Typography>
+            </Typography> */}
+            <ImageWrapper
+              src="/assets/about/logo.png"
+              height={isInMobile ? "54px" : "64px"}
+            />
           </Link>
           <Box width={1} />
           {isInMobile ? (

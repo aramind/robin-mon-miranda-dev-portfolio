@@ -1,5 +1,5 @@
 import { IconButton, Stack, Typography } from "@mui/material";
-import React, { Fragment } from "react";
+import React from "react";
 import { contactDetails } from "../../data/data";
 
 const DetailWithTextOnly = ({ contact }) => (

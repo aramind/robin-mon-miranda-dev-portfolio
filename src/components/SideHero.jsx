@@ -1,4 +1,4 @@
-import { Box, Button, Slide, Stack, Typography } from "@mui/material";
+import { Box, Slide, Typography } from "@mui/material";
 import CTAButtons from "./CTAButtons";
 
 const SideHero = ({ isVisible, handleOpenMessageDialog }) => {

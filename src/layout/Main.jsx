@@ -27,10 +27,6 @@ const Main = () => {
     setOpeMessageDialog(true);
   };
 
-  const handleCloseMessageDialog = () => {
-    setOpeMessageDialog(false);
-  };
-
   // api
   const sendMessageRequest = async (formData) => {
     try {

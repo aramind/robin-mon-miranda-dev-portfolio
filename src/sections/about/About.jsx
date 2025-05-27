@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import SectionTitle from "../../components/SectionTitle";
-import { Avatar, Box, Chip, Grid, Stack, Typography } from "@mui/material";
+import { Avatar, Box, Chip, Stack, Typography } from "@mui/material";
 import useIsInMobile from "../../hooks/useIsInMobile";
 import { aboutMe } from "../../data/data";
 
@@ -63,8 +63,10 @@ const About = () => {
           <Box
             height="192px"
             width="192px"
-            sx={{ backgroundColor: "primary.main" }}
-          />
+            // sx={{ backgroundColor: "primary.main" }}
+          >
+            <Typography>R</Typography>
+          </Box>
           {!isInMobile && (
             <>
               <Box

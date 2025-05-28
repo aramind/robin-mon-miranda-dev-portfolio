@@ -110,16 +110,7 @@ export const experiences = [
       "Actively contributed to curriculum enhancement by incorporating real-world problem-solving exercises, fostering analytical thinking and applied technical skills.",
     ],
   },
-  {
-    company: "Universal College of Parañaque",
-    location: "Parañaque, Philippines",
-    roles: [{ title: "Part-time Instructor", period: "Jan 2017 – Mar 2023" }],
-    highlights: [
-      "Delivered instruction in mathematics, allied sciences, electronics, and communication systems to students in the ECE, EE, IE, and CpE programs, fostering both theoretical understanding and practical application.",
-      "Played a key role in preparing graduating students—especially in the ECE and EE departments—for licensure exams, contributing to the school’s consistently above-national average passing rates.",
-      "Developed and implemented board-exam readiness activities and diagnostic evaluations tailored to student needs, supporting improved academic outcomes.",
-    ],
-  },
+
   {
     company: "QuexBook",
     location: "Cavite, Philippines",
@@ -133,6 +124,16 @@ export const experiences = [
       "Contributed educational content for the QuexBook app, designed to support high school and college students in mastering core academic subjects.",
       "Reviewed and evaluated content of the mobile app to ensure accuracy, clarity, and alignment with target outcomes.",
       "Played a key role in planning and enhancing the app’s educational structure, improving user experience and learning effectiveness.",
+    ],
+  },
+  {
+    company: "Universal College of Parañaque",
+    location: "Parañaque, Philippines",
+    roles: [{ title: "Part-time Instructor", period: "Jan 2017 – Mar 2022" }],
+    highlights: [
+      "Delivered instruction in mathematics, allied sciences, electronics, and communication systems to students in the ECE, EE, IE, and CpE programs, fostering both theoretical understanding and practical application.",
+      "Played a key role in preparing graduating students—especially in the ECE and EE departments—for licensure exams, contributing to the school’s consistently above-national average passing rates.",
+      "Developed and implemented board-exam readiness activities and diagnostic evaluations tailored to student needs, supporting improved academic outcomes.",
     ],
   },
   {
@@ -207,5 +208,6 @@ export const sendMessageURL =
 
 export const links = {
   resume:
-    "https://drive.google.com/file/d/118Do2i__BE9iW-Ugsui91sbZb9wJGOdt/view?usp=sharing",
+    // "https://drive.google.com/file/d/118Do2i__BE9iW-Ugsui91sbZb9wJGOdt/view?usp=sharing",
+    "https://drive.google.com/drive/folders/1zEfrhBr6Y6fuU78gezpm3pcbsNFOdieK?usp=sharing",
 };

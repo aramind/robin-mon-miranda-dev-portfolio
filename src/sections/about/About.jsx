@@ -74,10 +74,12 @@ const About = () => {
         </ParagraphWrapper>
         <ParagraphWrapper>
           While I love teaching and mentoring, what truly energized me were the
-          moments I had to think of solutions to specific problems: designing
-          specialized materials, creating systems tailored to unique needs, and
-          figuring out how to make ideas work in practice. That’s where I
-          discovered my <Highlighted>passion — building solutions</Highlighted>.
+          moments I had to <Highlighted>think</Highlighted> of solutions to
+          specific problems: <Highlighted>designing</Highlighted> specialized
+          materials, <Highlighted>creating</Highlighted> systems tailored to
+          unique needs, and <Highlighted>figuring out</Highlighted> how to make
+          ideas work in practice. That’s where I discovered my{" "}
+          <Highlighted>passion — building solutions</Highlighted>.
         </ParagraphWrapper>
         <ParagraphWrapper>
           This led me to <Highlighted>explore software development</Highlighted>
@@ -95,9 +97,9 @@ const About = () => {
           creating side projects.
         </ParagraphWrapper>
         <ParagraphWrapper>
-          Tough I’m just starting out, I bring with me a strong{" "}
-          <Highlighted>foundation in logic and systems thinking</Highlighted>, a
-          <Highlighted>problem-solver’s mindset</Highlighted>, a{" "}
+          Though I’m just starting out, I bring with me a strong{" "}
+          <Highlighted>foundation in logic and systems thinking</Highlighted>,{" "}
+          <Highlighted>problem-solver’s mindset</Highlighted>,{" "}
           <Highlighted>passion for building</Highlighted>, and a deep{" "}
           <Highlighted>
             commitment to continuous learning and growth
@@ -105,8 +107,9 @@ const About = () => {
           .
         </ParagraphWrapper>
         <ParagraphWrapper>
-          As I continue learning and building, I’ve had the chance to work with
-          the following technologies:
+          As I <Highlighted>continue learning</Highlighted> and building, I’ve
+          had the <Highlighted>chance to work</Highlighted> with the following
+          <Highlighted>technologies:</Highlighted>
         </ParagraphWrapper>
         <Box
           display="flex"

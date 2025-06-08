@@ -30,14 +30,14 @@ const Landing = forwardRef(({ handleOpenMessageDialog }, ref) => {
           fontWeight="bold"
           color="primary.light"
         >
-          Engineer. Educator. Now, to build with code.
+          Engineer. Educator. Now building with code.
         </Typography>
         <br />
         <Box width={{ xs: 1, md: "50%" }}>
           <Typography fontSize={{ xs: "1rem", md: "1.2rem" }}>
-            I’m an electronics engineer transitioning into software development.
-            I’m currently open to work and excited to begin a career where I can
-            provide solutions through code.
+            I’m an electronics engineer and educator who has transitioned into
+            software development. I’m open to opportunities and excited to begin
+            contributing solutions through code.
           </Typography>
           <CTAButtons handleOpenMessageDialog={handleOpenMessageDialog} />
         </Box>

@@ -25,13 +25,13 @@ const SideHero = ({ isVisible, handleOpenMessageDialog }) => {
           fontWeight="bold"
           color="primary.light"
         >
-          Engineer. Educator. Now, to build with code.
+          Engineer. Educator. Now building with code.
         </Typography>
         <Box width={{ xs: 1, md: "75%" }}>
           <Typography>
-            I’m an electronics engineer transitioning into software development.
-            I’m currently open to work and excited to begin a career where I can
-            provide solutions through code.
+            I’m an electronics engineer and educator who has transitioned into
+            software development. I’m open to opportunities and excited to begin
+            contributing solutions through code.
           </Typography>
           {/* <Stack justifyContent="space-between" spacing={2} mt={2}>
             <Button variant="outlined" fullWidth sx={{ py: 1.5 }}>

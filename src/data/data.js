@@ -84,7 +84,7 @@ export const experiences = [
     company: "PERCDC Learnhub",
     location: "Manila, Cebu, and Cavite, Philippines",
     roles: [
-      { title: "Asst. Review Director", period: "May 2015 - Apr 2025" },
+      // { title: "Asst. Review Director", period: "May 2015 - Apr 2025" },
       { title: "Review Mentor", period: "May 2013 - Apr 2025" },
     ],
     highlights: [
@@ -100,8 +100,8 @@ export const experiences = [
     company: "PUP Manila",
     location: "Manila, Philippines",
     roles: [
-      { title: "Full-time Instructor", period: "Jun 2022 – Feb 2025" },
-      { title: "Part-time Instructor", period: "Jun 2016 – Jun 2022" },
+      { title: "Engineering Faculty", period: "Jun 2016 – Feb 2025" },
+      // { title: "Part-time Instructor", period: "Jun 2016 – Jun 2022" },
     ],
     highlights: [
       "Taught and mentored over 3,000 students in Electronics, Electrical, and Mechanical Engineering programs, delivering in-depth instruction in electronics and communication systems.",
@@ -121,7 +121,7 @@ export const experiences = [
       },
     ],
     highlights: [
-      "Contributed educational content for the QuexBook app, designed to support high school and college students in mastering core academic subjects.",
+      "Contributed educational contents for various QuexBook apps, designed to support high school and college students in mastering core academic subjects.",
       "Reviewed and evaluated content of the mobile app to ensure accuracy, clarity, and alignment with target outcomes.",
       "Played a key role in planning and enhancing the app’s educational structure, improving user experience and learning effectiveness.",
     ],
@@ -129,7 +129,7 @@ export const experiences = [
   {
     company: "Universal College of Parañaque",
     location: "Parañaque, Philippines",
-    roles: [{ title: "Part-time Instructor", period: "Jan 2017 – Mar 2022" }],
+    roles: [{ title: "Engineering Faculty", period: "Jan 2017 – Mar 2022" }],
     highlights: [
       "Delivered instruction in mathematics, allied sciences, electronics, and communication systems to students in the ECE, EE, IE, and CpE programs, fostering both theoretical understanding and practical application.",
       "Played a key role in preparing graduating students—especially in the ECE and EE departments—for licensure exams, contributing to the school’s consistently above-national average passing rates.",
@@ -139,7 +139,7 @@ export const experiences = [
   {
     company: "ACLC College of Manila",
     location: "Manila, Philippines",
-    roles: [{ title: "Part-Time Instructor", period: "Jun 2019 – Mar 2020" }],
+    roles: [{ title: "College Faculty", period: "Jun 2019 – Mar 2020" }],
     highlights: [
       "Taught foundational Math and Science courses to students in the Information Systems program.",
       "Helped students in their understanding and academic success in core subjects.",

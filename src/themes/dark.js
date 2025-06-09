@@ -32,7 +32,7 @@ const darkTheme = createTheme({
     white: COLORS.white,
   },
   typography: {
-    fontFamily: `"Inter", "Nunito Sans", "Roboto", sans-serif`,
+    fontFamily: `"Sora","Inter", "Nunito Sans", "Roboto", sans-serif`,
     condensed: `"Barlow Condensed", sans-serif`,
     poppins: `"Poppins", sans-serif`,
     nunito: `"Nunito Sans", sans-serif`,

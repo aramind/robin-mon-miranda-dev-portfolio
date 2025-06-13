@@ -1,6 +1,7 @@
 import { IconButton, Stack, Typography } from "@mui/material";
 import React from "react";
 import { contactDetails } from "../../data/data";
+import GradientText from "../../components/experimental/GradientText";
 
 const DetailWithTextOnly = ({ contact }) => (
   <Stack
@@ -26,14 +27,16 @@ const DetailWithLinkIconOnly = ({ contact, text }) => (
 const PersonalDetails = () => {
   return (
     <Stack spacing={1}>
-      <Typography
-        color="primary"
-        fontSize={{ xs: "1.2rem", md: "1.6rem" }}
-        fontWeight="bold"
-        textAlign="center"
-      >
-        Robin Mon R. Miranda
-      </Typography>
+      <GradientText isCentered={true} colorType="primaryLight">
+        <Typography
+          color="primary"
+          fontSize={{ xs: "1.2rem", md: "1.6rem" }}
+          fontWeight="bold"
+          textAlign="center"
+        >
+          Robin Mon R. Miranda
+        </Typography>
+      </GradientText>
       <Stack spacing={0.5}>
         <DetailWithTextOnly
           contact={contactDetails?.find((c) => c.name === "email")}

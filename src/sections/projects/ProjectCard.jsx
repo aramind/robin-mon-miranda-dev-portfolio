@@ -3,6 +3,7 @@ import React, { Fragment } from "react";
 import ProjectImage from "./ProjectImage";
 import IconImage from "./IconImage";
 import { GitIcon, LaunchIcon } from "../../utils/muiIcons";
+import GradientText from "../../components/experimental/GradientText";
 
 const ProjectCard = ({
   title,
@@ -50,14 +51,16 @@ const ProjectCard = ({
         justifyContent="space-between"
         alignItems="center"
       >
-        <Typography
-          color="primary"
-          fontSize="1.2rem"
-          fontWeight="bold"
-          textAlign={{ xs: "center", md: "left" }}
-        >
-          {title}
-        </Typography>
+        <GradientText colorType="primaryDark">
+          <Typography
+            color="primary"
+            fontSize="1.2rem"
+            fontWeight="bold"
+            textAlign={{ xs: "center", md: "left" }}
+          >
+            {title}
+          </Typography>
+        </GradientText>
         <Stack direction="row">
           <IconButton
             color="secondary"

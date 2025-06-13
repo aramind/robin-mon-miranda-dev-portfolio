@@ -1,5 +1,6 @@
 import { Box, Slide, Typography } from "@mui/material";
 import CTAButtons from "./CTAButtons";
+import GradientText from "./experimental/GradientText";
 
 const SideHero = ({ isVisible, handleOpenMessageDialog }) => {
   return (
@@ -11,22 +12,26 @@ const SideHero = ({ isVisible, handleOpenMessageDialog }) => {
       unmountOnExit
     >
       <Box width={1} height={1} alignContent="center">
-        <Typography
-          fontSize={{ xs: "2rem", md: "2.5rem" }}
-          // variant={isInMobile ? "h5" : "h4"}
-          fontWeight="bold"
-          color="primary"
-        >
-          Robin Mon Miranda
-        </Typography>
-        <Typography
-          fontSize={{ xs: "1.1rem", md: "1.4rem" }}
-          // variant={isInMobile ? "h6" : "h5"}
-          fontWeight="bold"
-          color="primary.light"
-        >
-          Engineer. Educator. Now building with code.
-        </Typography>
+        <GradientText colorType="primaryDark">
+          <Typography
+            fontSize={{ xs: "2rem", md: "2.5rem" }}
+            // variant={isInMobile ? "h5" : "h4"}
+            fontWeight="bold"
+            color="primary"
+          >
+            Robin Mon Miranda
+          </Typography>
+        </GradientText>
+        <GradientText colorType="primaryLight">
+          <Typography
+            fontSize={{ xs: "1.1rem", md: "1.4rem" }}
+            // variant={isInMobile ? "h6" : "h5"}
+            fontWeight="bold"
+            color="primary.light"
+          >
+            Engineer. Educator. Now building with code.
+          </Typography>
+        </GradientText>
         <Box width={{ xs: 1, md: "75%" }}>
           <Typography>
             I’m an electronics engineer and educator who has transitioned into

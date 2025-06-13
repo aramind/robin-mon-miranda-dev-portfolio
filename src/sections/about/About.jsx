@@ -6,6 +6,7 @@ import { aboutMe } from "../../data/data";
 import useIsInMobile from "../../hooks/useIsInMobile";
 import ImageForLargeScreen from "./ImageForLargeScreen";
 import ImageForMobileScreen from "./ImageForMobileScreen";
+import GradientText from "../../components/experimental/GradientText";
 
 const Highlighted = ({ children }) => (
   <Box
@@ -49,14 +50,16 @@ const About = () => {
         justifyContent="center"
         mx="auto"
       >
-        <Typography
-          textAlign="center"
-          fontSize={{ xs: "2rem", md: "2.5rem" }}
-          fontWeight="bold"
-          color="primary"
-        >
-          ROBIN MON MIRANDA
-        </Typography>
+        <GradientText colorType="primaryDark" isCentered={true}>
+          <Typography
+            textAlign="center"
+            fontSize={{ xs: "2rem", md: "2.5rem" }}
+            fontWeight="bold"
+            color="primary"
+          >
+            ROBIN MON MIRANDA
+          </Typography>
+        </GradientText>
         <Stack
           direction="row"
           spacing={1}

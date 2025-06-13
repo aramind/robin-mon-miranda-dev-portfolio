@@ -1,10 +1,12 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography, useTheme } from "@mui/material";
 import useIsInMobile from "../../hooks/useIsInMobile";
 import { forwardRef } from "react";
 import CTAButtons from "../../components/CTAButtons";
+import GradientText from "../../components/experimental/GradientText";
 
 const Landing = forwardRef(({ handleOpenMessageDialog }, ref) => {
   const isInMobile = useIsInMobile();
+
   return (
     <Box
       ref={ref}
@@ -18,20 +20,27 @@ const Landing = forwardRef(({ handleOpenMessageDialog }, ref) => {
     >
       <Stack>
         <Typography fontSize="1.1rem">Hi, my name is</Typography>
-        <Typography
-          variant={isInMobile ? "h3" : "h2"}
-          fontWeight="bold"
-          color="primary"
-        >
-          Robin Mon Miranda
-        </Typography>
-        <Typography
-          variant={isInMobile ? "h5" : "h4"}
-          fontWeight="bold"
-          color="primary.light"
-        >
-          Engineer. Educator. Now building with code.
-        </Typography>
+
+        <GradientText colorType="primaryDark">
+          <Typography
+            variant={isInMobile ? "h3" : "h2"}
+            component="h1"
+            fontWeight="bold"
+            color="primary"
+            sx={{ m: 0, p: 0 }}
+          >
+            Robin Mon Miranda
+          </Typography>
+        </GradientText>
+        <GradientText colorType="primaryLight">
+          <Typography
+            variant={isInMobile ? "h5" : "h4"}
+            fontWeight="bold"
+            color="primary.light"
+          >
+            Engineer. Educator. Now building with code.
+          </Typography>
+        </GradientText>
         <br />
         <Box width={{ xs: 1, md: "50%" }}>
           <Typography fontSize={{ xs: "1rem", md: "1.2rem" }}>

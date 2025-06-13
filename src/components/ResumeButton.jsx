@@ -1,6 +1,7 @@
-import { Button } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import { links } from "../data/data";
 import { LaunchIcon } from "../utils/muiIcons";
+import GradientText from "./experimental/GradientText";
 
 const ResumeButton = () => {
   return (
@@ -9,9 +10,11 @@ const ResumeButton = () => {
       onClick={() =>
         window.open(links?.resume, "_blank", "noopener,noreferrer")
       }
-      endIcon={<LaunchIcon />}
+      endIcon={<LaunchIcon color="secondary" />}
     >
-      RESUME
+      <GradientText colorType="secondaryDark">
+        <Typography fontWeight="bold">RESUME</Typography>
+      </GradientText>
     </Button>
   );
 };

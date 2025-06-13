@@ -3,7 +3,6 @@ import React from "react";
 import useIsInMobile from "../../hooks/useIsInMobile";
 import CTAButtons from "../../components/CTAButtons";
 import PersonalDetails from "./PersonalDetails";
-import { Gradient } from "@mui/icons-material";
 import GradientText from "../../components/experimental/GradientText";
 
 const Contact = ({ handleOpenMessageDialog }) => {

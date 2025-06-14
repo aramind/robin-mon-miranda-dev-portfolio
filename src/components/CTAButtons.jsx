@@ -1,6 +1,7 @@
-import { Button, Stack } from "@mui/material";
+import { Button, Stack, Typography } from "@mui/material";
 import React from "react";
 import { links } from "../data/data";
+import ShinyText from "./experimental/ShinyText";
 
 const CTAButtons = ({ direction, handleOpenMessageDialog }) => {
   return (
@@ -18,7 +19,9 @@ const CTAButtons = ({ direction, handleOpenMessageDialog }) => {
           window.open(links?.resume, "_blank", "noopener,noreferrer")
         }
       >
-        CHECK MY RESUME
+        <ShinyText>
+          <Typography>CHECK MY RESUME</Typography>
+        </ShinyText>
       </Button>
       <Button
         variant="contained"
@@ -26,7 +29,7 @@ const CTAButtons = ({ direction, handleOpenMessageDialog }) => {
         sx={{ py: 1.5 }}
         onClick={handleOpenMessageDialog}
       >
-        SHOOT ME A MESSAGE
+        <Typography>SHOOT ME A MESSAGE</Typography>
       </Button>
     </Stack>
   );

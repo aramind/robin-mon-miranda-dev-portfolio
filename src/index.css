@@ -37,6 +37,16 @@ section {
 .condensedText {
   font-family: "Barlow Condensed", sans-serif;
 }
+
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
 /* for testing */
 .outlined {
   border: 1px solid red;

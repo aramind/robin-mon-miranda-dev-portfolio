@@ -3,6 +3,7 @@ import useIsInMobile from "../../hooks/useIsInMobile";
 import { forwardRef } from "react";
 import CTAButtons from "../../components/CTAButtons";
 import GradientText from "../../components/experimental/GradientText";
+import ShinyText from "../../components/experimental/ShinyText";
 
 const Landing = forwardRef(({ handleOpenMessageDialog }, ref) => {
   const isInMobile = useIsInMobile();
@@ -42,7 +43,7 @@ const Landing = forwardRef(({ handleOpenMessageDialog }, ref) => {
           </Typography>
         </GradientText>
         <br />
-        <Box width={{ xs: 1, md: "50%" }}>
+        <Box width={{ xs: 1, md: "60%" }}>
           <Typography fontSize={{ xs: "1rem", md: "1.2rem" }}>
             I’m an electronics engineer and educator who has transitioned into
             software development. I’m open to opportunities and excited to begin

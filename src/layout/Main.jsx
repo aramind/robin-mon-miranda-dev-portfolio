@@ -91,6 +91,7 @@ const Main = () => {
         </Box>
         <Stack flex={2} width={1} direction="column">
           <Project />
+          <br />
           <Experiences ref={experiencesRef} />
         </Stack>
       </Stack>

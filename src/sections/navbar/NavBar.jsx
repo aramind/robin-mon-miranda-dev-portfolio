@@ -3,6 +3,7 @@ import NavbarLinks from "./NavbarLinks";
 import useIsInMobile from "../../hooks/useIsInMobile";
 import NavLinksMobile from "./NavLinksMobile";
 import ImageWrapper from "../../components/ImageWrapper";
+import useScrollDirection from "../../hooks/useScrollDirection";
 
 const sections = [
   { text: "", name: "landing" },
@@ -14,8 +15,19 @@ const sections = [
 
 const NavBar = () => {
   const isInMobile = useIsInMobile();
+  const scrollDirection = useScrollDirection();
+
   return (
-    <AppBar sx={{ maxHeight: "80px" }} elevation={0}>
+    <AppBar
+      sx={{
+        maxHeight: "80px",
+        transition: "transform 0.3s ease-in-out",
+
+        transform:
+          scrollDirection === "down" ? "translateY(-100%)" : "translateY(0)",
+      }}
+      elevation={0}
+    >
       <Toolbar sx={{ backgroundColor: (theme) => theme.palette.black.main }}>
         <Stack
           direction="row"

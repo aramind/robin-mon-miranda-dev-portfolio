@@ -8,23 +8,43 @@ import ImageForLargeScreen from "./ImageForLargeScreen";
 import ImageForMobileScreen from "./ImageForMobileScreen";
 import GradientText from "../../components/experimental/GradientText";
 
-const Highlighted = ({ children }) => (
-  <Box
-    component="span"
-    color="secondary.lightest"
-    fontWeight="bold"
-    sx={{
-      display: "inline",
-      borderBottom: "1.5px solid",
-      borderColor: (theme) => theme.palette.secondary.main,
-    }}
-  >
-    {children}
-  </Box>
-);
+const Highlighted = ({ children }) => {
+  const isInMobile = useIsInMobile();
+
+  return (
+    <Box
+      component="span"
+      color={isInMobile ? "secondary.lightest" : ""}
+      className="highlighted"
+      fontWeight="bold"
+      sx={{
+        display: "inline",
+        borderBottom: "1.5px solid",
+        borderColor: (theme) => theme.palette.secondary.lightest,
+      }}
+    >
+      {children}
+    </Box>
+  );
+};
 
 const ParagraphWrapper = ({ children }) => (
-  <Typography variant="body2" textAlign="justify" fontSize={{ md: "1.2rem" }}>
+  <Typography
+    variant="body2"
+    textAlign="justify"
+    fontSize={{ md: "1.2rem" }}
+    sx={{
+      "& .highlighted": {
+        transition: "all 0.3s ease",
+      },
+      "&:hover .highlighted": {
+        // backgroundColor: "secondary.lightest",
+
+        borderBottom: "1.5px solid",
+        color: "secondary.main",
+      },
+    }}
+  >
     {children}
   </Typography>
 );
@@ -100,20 +120,19 @@ const About = () => {
           creating side projects.
         </ParagraphWrapper>
         <ParagraphWrapper>
-          Though I’m just starting out, I bring with me a strong{" "}
-          <Highlighted>foundation in logic and systems thinking</Highlighted>,{" "}
-          <Highlighted>problem-solver’s mindset</Highlighted>,{" "}
-          <Highlighted>passion for building</Highlighted>, and a deep{" "}
-          <Highlighted>
-            commitment to continuous learning and growth
-          </Highlighted>
-          .
+          Though I’m just starting out, I bring with me a strong foundation in{" "}
+          <Highlighted>logic</Highlighted> and{" "}
+          <Highlighted>systems thinking</Highlighted>,{" "}
+          <Highlighted>problem-solver’s mindset</Highlighted>, passion for{" "}
+          <Highlighted>building</Highlighted>, and a deep commitment to{" "}
+          <Highlighted>continuous learning</Highlighted> and growth.
         </ParagraphWrapper>
         <ParagraphWrapper>
           As I <Highlighted>continue learning</Highlighted> and building, I’ve
-          had the <Highlighted>chance to work</Highlighted> with the following
+          had the <Highlighted>chance to work</Highlighted> with the following{" "}
           <Highlighted>technologies:</Highlighted>
         </ParagraphWrapper>
+        <Box height={1} />
         <Box
           display="flex"
           flexWrap="wrap"

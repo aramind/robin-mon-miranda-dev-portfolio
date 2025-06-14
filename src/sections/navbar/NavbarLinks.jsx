@@ -3,6 +3,7 @@ import React from "react";
 import useActiveSection from "../../hooks/useActiveSection";
 
 import ResumeButton from "../../components/ResumeButton";
+import Magnet from "../../components/experimental/Magnet";
 
 const NavbarLinks = ({ sections }) => {
   const active = useActiveSection(sections.map((s) => s.name));
@@ -30,7 +31,9 @@ const NavbarLinks = ({ sections }) => {
           </Typography>
         </Link>
       ))}
-      <ResumeButton />
+      <Magnet>
+        <ResumeButton />
+      </Magnet>
     </Stack>
   );
 };

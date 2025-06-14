@@ -2,6 +2,7 @@ import { Button, Stack, Typography } from "@mui/material";
 import React from "react";
 import { links } from "../data/data";
 import ShinyText from "./experimental/ShinyText";
+import Magnet from "./experimental/Magnet";
 
 const CTAButtons = ({ direction, handleOpenMessageDialog }) => {
   return (
@@ -23,14 +24,17 @@ const CTAButtons = ({ direction, handleOpenMessageDialog }) => {
           <Typography>CHECK MY RESUME</Typography>
         </ShinyText>
       </Button>
-      <Button
-        variant="contained"
-        fullWidth
-        sx={{ py: 1.5 }}
-        onClick={handleOpenMessageDialog}
-      >
-        <Typography>SHOOT ME A MESSAGE</Typography>
-      </Button>
+
+      <Magnet>
+        <Button
+          variant="contained"
+          fullWidth
+          sx={{ py: 1.5 }}
+          onClick={handleOpenMessageDialog}
+        >
+          <Typography>SHOOT ME A MESSAGE</Typography>
+        </Button>
+      </Magnet>
     </Stack>
   );
 };

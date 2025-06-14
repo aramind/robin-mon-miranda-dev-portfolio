@@ -61,6 +61,7 @@ const ProjectCard = ({
             {title}
           </Typography>
         </GradientText>
+
         <Stack direction="row">
           <IconButton
             color="secondary"

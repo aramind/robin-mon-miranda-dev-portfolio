@@ -93,10 +93,12 @@ const Main = () => {
           <Project />
           <br />
           <Experiences ref={experiencesRef} />
+          <br />
         </Stack>
       </Stack>
       <br />
       <About />
+      <br />
       <Contact handleOpenMessageDialog={handleOpenMessageDialog} />
       <SendMessageDialog
         open={openMessageDialog}

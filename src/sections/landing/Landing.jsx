@@ -3,7 +3,6 @@ import useIsInMobile from "../../hooks/useIsInMobile";
 import { forwardRef } from "react";
 import CTAButtons from "../../components/CTAButtons";
 import GradientText from "../../components/experimental/GradientText";
-import ShinyText from "../../components/experimental/ShinyText";
 
 const Landing = forwardRef(({ handleOpenMessageDialog }, ref) => {
   const isInMobile = useIsInMobile();

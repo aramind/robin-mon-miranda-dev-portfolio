@@ -29,14 +29,18 @@ const SideHero = ({ isVisible, handleOpenMessageDialog }) => {
             fontWeight="bold"
             color="primary.light"
           >
-            Engineer. Educator. Now building with code.
+            {/* Engineer. Educator. Now building with code. */}
+            Engineer > Mentor > Developer
           </Typography>
         </GradientText>
         <Box width={{ xs: 1, md: "75%" }}>
           <Typography>
-            I’m an electronics engineer and educator who has transitioned into
+            {/* I’m an electronics engineer and educator who has transitioned into
             software development. I’m open to opportunities and excited to begin
-            contributing solutions through code.
+            contributing solutions through code. */}
+            Engineer by training, builder by passion, and user-centered by
+            mindset — I craft solutions engineered with logic and designed with
+            empathy.
           </Typography>
           {/* <Stack justifyContent="space-between" spacing={2} mt={2}>
             <Button variant="outlined" fullWidth sx={{ py: 1.5 }}>

@@ -41,9 +41,11 @@ const Contact = ({ handleOpenMessageDialog }) => {
         textAlign="center"
         fontSize={{ xs: "1rem", md: "1.4rem" }}
       >
-        I'm currently seeking opportunities to kickstart my journey in software
+        {/* I'm currently seeking opportunities to kickstart my journey in software
         development. If you're open to connecting or have a role where I could
-        contribute and grow, I'd love to hear from you!
+        contribute and grow, I'd love to hear from you! */}
+        If you have something where I can contribute and help create thoughtful
+        solutions, I’d be glad to hear from you.
       </Typography>
       <br />
       <CTAButtons handleOpenMessageDialog={handleOpenMessageDialog} />
